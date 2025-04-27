@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+}
+
+#nav {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 1px 1px #f1f1f1;
+
+}
+
+#nav li {
+    list-style: none;
+}
+
+#direita {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-right: 150px;
+}
+
+#direita a{
+    text-decoration: none;
+    color: black;
+}
+
+#esquerda {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Conteúdo */
+#conteudo {
+    background-image: url(../img/backgroundBob.png);
+    background-size: cover;
+    background-size: 100%;
+    height: 816px;
+}
+
+#login {
+
+}
+
+
+
+
+
+/* Footer */
+#footer {
+    background-image: url(../img/backgroundAreia.png);
+    background-size: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}

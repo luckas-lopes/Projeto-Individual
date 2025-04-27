@@ -1,0 +1,43 @@
+section{
+    /* Define que a posição dos elementos dentro dela sejam relativos à própria */
+    position: relative;
+    /* Impede sobreposição */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section span{
+    /* Define a posição como absoluta, se sobressaindo sobre tudo independente do conteúdo  */
+    position: absolute;
+    /* Define a posição vertical da onde as bolhas vão surgir */
+    bottom: 0;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: animate 5s linear infinite;
+}
+
+/* Cria um pseudo-elemento para a tag spann antes dela ser gerada */
+section span::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.25) translate(-70% , -70%);
+    background: radial-gradient(#fff, transparent);
+    border-radius: 50%;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0%);
+    }
+
+    100%{
+        transform: translateY(-1200%);
+    }
+}

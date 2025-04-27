@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Projeto-Individual/css/bolhas.css">
+    <link rel="stylesheet" href="../Projeto-Individual/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <!-- Nav -->
+        <div id="nav">
+            <div id="esquerda">
+                logo
+            </div>
+            <div id="direita">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                |
+                <li><a href="#">Login</a></li>
+                <li><a href="#"> Cadastro </a> </li>
+            </div>
+        </div>
+    </header>
+    
+    <body>
+    
+        
+        <!-- Conteúdo  -->
+        <div id="conteudo">
+            
+            <section>
+
+                <div id="login">
+                
+            </section>
+            
+        </div>
+    
+        <!-- Footer -->
+        <div id="footer">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam autem cumque suscipit, soluta, perferendis
+            cupiditate labore maxime unde dolorum aut culpa iste quidem, delectus accusantium rem. Doloribus aut voluptatum
+            deleniti?
+        </div>
+    
+    </body>
+    
+    <script>
+    
+        function criandoBolhas() {
+            // Declarando variável "section" como a primeira section do HTML
+            const section = document.querySelector('section');
+    
+            const bolha = document.createElement('span');
+    
+            // Definindo tamnho da bolha (aleatório de 0 a 150)
+            var size = Math.random() * 150;
+    
+            // Definindo largura da bolha
+            bolha.style.width = 20 + size + 'px';
+            // Definindo altura da bolha
+            bolha.style.height = 20 + size + 'px';
+            // Definindo posição lateralmente da bolha
+            bolha.style.left = Math.random() * innerWidth + 'px';
+            // Criando e colocando a bolha na Section
+            section.appendChild(bolha);
+    
+            // Intervalo para remoção da bolha
+            setTimeout(() => {
+                bolha.remove();
+            }, 20000)
+        }
+        // Intervalo para criação de outra bolha
+        setInterval(criandoBolhas, 400);
+    
+    
+    </script>
+
+</body>
+</html>
