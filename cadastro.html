@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Projeto-Individual/css/bolhas.css">
     <link rel="stylesheet" href="../Projeto-Individual/css/cadastro.css">
+    <script src="./js/bolhas.js"></script>
     <title>Login</title>
 </head>
+
 <body>
     <header>
         <!-- Nav -->
@@ -15,72 +18,87 @@
                 <div id="logo"></div>
             </div>
             <div id="direita">
-                <li><a href="index.html"><p class="fonte1">Home</p></a></li>
-                <li><a href="#"><p class="fonte1">Sobre</p></a></li>
+                <li><a href="index.html">
+                        <p class="fonte1">Home</p>
+                    </a></li>
+                <li><a href="#">
+                        <p class="fonte1">Sobre</p>
+                    </a></li>
                 |
-                <li><a href="./login.html"><p class="fonte1">Login</p></a></li>
-                <li><a href="./cadastro.html"><p class="fonte1">Cadastro</p></a> </li>
+                <li><a href="./login.html">
+                        <p class="fonte1">Login</p>
+                    </a></li>
+                <li><a href="./cadastro.html">
+                        <p class="fonte1">Cadastro</p>
+                    </a> </li>
             </div>
         </div>
     </header>
-    
+
     <body>
-    
-        
+
+
         <!-- Conteúdo  -->
         <div id="conteudo">
-            
+
             <section>
-                
+
                 <div id="container">
                     <div id="card">
-                        <p><b class="fonte2">Já</b><b class="fonte1">possui uma conta?</b></p>
+                        <div>
+                            <p><b class="fonte2">Já </b><b class="fonte1">possui uma conta?</b></p>
+                        </div>
+                        <div id="entre">
+                            <p><b class="fonte1">Entre aqui</b></p>
+                        </div>
+                        <button onclick="redirecionarLogin()" class="fonte1">Login</button>
                     </div>
                     <div id="cadastro">
-                        
-                        
+                        <div id="headerCadastro">
+                            <h1>Crie sua conta</h1>
+                            <label>
+                                <p>Nome:</p>
+                                <input type="text"> 
+                            </label>
+                            <label>
+                                <p>Email:</p>
+                                <input type="text">
+                            </label>
+                            <label>
+                                <p>Senha:</p>
+                                <input type="text">
+                            </label>
+                            <label>
+                                <p>Confirme sua senha:</p>
+                                <input type="text">
+                            </label>
+                            <button>Entrar</button>
+                        </div>
+                    </div>
+
+
                 </div>
 
             </section>
         </div>
-    
+
         <!-- Footer -->
         <div id="footer">
-            <p >ⓒ Luckas Lopes 2025 - Todos os Direitos Reservados</p>
+            <p>ⓒ Luckas Lopes 2025 - Todos os Direitos Reservados</p>
         </div>
-    
+
     </body>
-    
+
     <script>
-    
-        function criandoBolhas() {
-            // Declarando variável "section" como a primeira section do HTML
-            const section = document.querySelector('section');
-    
-            const bolha = document.createElement('span');
-    
-            // Definindo tamnho da bolha (aleatório de 0 a 150)
-            var size = Math.random() * 150;
-    
-            // Definindo largura da bolha
-            bolha.style.width = 20 + size + 'px';
-            // Definindo altura da bolha
-            bolha.style.height = 20 + size + 'px';
-            // Definindo posição lateralmente da bolha
-            bolha.style.left = Math.random() * innerWidth + 'px';
-            // Criando e colocando a bolha na Section
-            section.appendChild(bolha);
-    
-            // Intervalo para remoção da bolha
-            setTimeout(() => {
-                bolha.remove();
-            }, 20000)
+
+        function redirecionarLogin() {
+
+            window.location = 'login.html';
+
         }
-        // Intervalo para criação de outra bolha
-        setInterval(criandoBolhas, 400);
-    
-    
+
     </script>
 
 </body>
+
 </html>
