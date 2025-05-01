@@ -19,6 +19,7 @@ section span{
     border-radius: 50%;
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
     animation: animate 5s linear infinite;
+    z-index: 0;
 }
 
 /* Cria um pseudo-elemento para a tag spann antes dela ser gerada */
