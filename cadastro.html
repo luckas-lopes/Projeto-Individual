@@ -7,98 +7,90 @@
     <link rel="stylesheet" href="../Projeto-Individual/css/bolhas.css">
     <link rel="stylesheet" href="../Projeto-Individual/css/cadastro.css">
     <script src="./js/bolhas.js"></script>
-    <title>Login</title>
+    <script src="./js/cadastro.js"></script>
+    <title>Cadastro</title>
 </head>
 
-<body>
-    <header>
-        <!-- Nav -->
-        <div id="nav">
-            <div id="esquerda">
-                <a href="./index.html"><div id="logo"></div></a>
-            </div>
-            <div id="direita">
-                <li><a href="index.html">
-                        <p class="fonte1">Home</p>
-                    </a></li>
-                <li><a href="./sobre.html">
-                        <p class="fonte1">Sobre</p>
-                    </a></li>
-                |
-                <li><a href="./login.html">
-                        <p class="fonte1">Login</p>
-                    </a></li>
-                <li><a href="./cadastro.html">
-                        <p class="fonte1">Cadastro</p>
-                    </a> </li>
-            </div>
+
+<header>
+    <!-- Nav -->
+    <div id="nav">
+        <div id="esquerda">
+            <a href="./index.html">
+                <div id="logo"></div>
+            </a>
         </div>
-    </header>
+        <div id="direita">
+            <li><a href="index.html">
+                    <p class="fonte1">Home</p>
+                </a></li>
+            <li><a href="./sobre.html">
+                    <p class="fonte1">Sobre</p>
+                </a></li>
+            |
+            <li><a href="./login.html">
+                    <p class="fonte1">Login</p>
+                </a></li>
+            <li><a href="./cadastro.html">
+                    <p class="fonte1">Cadastro</p>
+                </a> </li>
+        </div>
+    </div>
+</header>
 
-    <body>
+<body>
+    <!-- Conteúdo  -->
+    <div id="conteudo">
 
+        <section>
 
-        <!-- Conteúdo  -->
-        <div id="conteudo">
-
-            <section>
-
-                <div id="container">
-                    <div id="card">
-                        <div>
-                            <p><b class="fonte2">Já </b><b class="fonte1">possui uma conta?</b></p>
-                        </div>
-                        <div id="entre">
-                            <p><b class="fonte1">Entre aqui</b></p>
-                        </div>
-                        <button onclick="redirecionarLogin()" class="fonte1">Login</button>
+            <div id="container">
+                <div id="card">
+                    <div>
+                        <p><b class="fonte2">Já </b><b class="fonte1">possui uma conta?</b></p>
                     </div>
-                    <div id="cadastro">
-                        <div id="headerCadastro">
-                            <h1>Crie sua conta</h1>
-                            <label>
-                                <p>Nome:</p>
-                                <input type="text"> 
-                            </label>
-                            <label>
-                                <p>Email:</p>
-                                <input type="text">
-                            </label>
-                            <label>
-                                <p>Senha:</p>
-                                <input type="text">
-                            </label>
-                            <label>
-                                <p>Confirme sua senha:</p>
-                                <input type="text">
-                            </label>
-                            <button>Entrar</button>
-                        </div>
+                    <div id="entre">
+                        <p><b class="fonte1">Entre aqui</b></p>
                     </div>
-
-
+                    <button onclick="redirecionarLogin()" class="fonte1">Login</button>
+                </div>
+                <div id="cadastro">
+                    <div id="headerCadastro">
+                        <h1>Crie sua conta</h1>
+                        <label>
+                            <p>Nome</p>
+                            <input onblur="validarNomeErrado()" oninput="validarNomeCorreto()" type="text" id="iptNome">
+                            <div id="legendaNome"></div>
+                        </label>
+                        <label>
+                            <p>Email</p>
+                            <input type="text" onblur="validarEmailErrado()" oninput="validarEmailCorreto()" id="iptEmail">
+                            <div id="legendaEmail"></div>
+                        </label>
+                        <label>
+                            <p>Senha</p>
+                            <input onblur="validarSenhaErrado()" oninput="validarSenhaCorreto()" type="password" id="iptSenha">
+                            <div id="legendaSenha"></div>
+                        </label>
+                        <label>
+                            <p>Confirme sua senha</p>
+                            <input type="password" onblur="validarConfirmarSenhaErrado()" oninput="validarConfirmarSenhaCorreto()" id="iptConfirmarSenha">
+                            <div id="legendaConfirmarSenha"></div>
+                        </label>
+                        <button>Entrar</button>
+                    </div>
                 </div>
 
-            </section>
-        </div>
 
-        <!-- Footer -->
-        <div id="footer">
-            <p>ⓒ Luckas Lopes 2025 - Todos os Direitos Reservados</p>
-        </div>
+            </div>
 
-    </body>
+        </section>
+    </div>
 
-    <script>
-
-        function redirecionarLogin() {
-
-            window.location = 'login.html';
-
-        }
-
-    </script>
+    <!-- Footer -->
+    <div id="footer">
+        <p>ⓒ Luckas Lopes 2025 - Todos os Direitos Reservados</p>
+    </div>
 
 </body>
-
 </html>
