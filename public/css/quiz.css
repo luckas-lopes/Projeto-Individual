@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: bob;
+    src: url(../font/KrabbyPatty.ttf);
+ }
+
+ @font-face {
+    font-family: bob2;
+    src: url(../font/freckle-face-regular.ttf);
+ }
+
+body {
+    margin: 0;
+}
+
+header {  
+    width: 100%;
+}
+
+.fonte1 {
+    font-family: bob;
+}
+
+.fonte2 {
+    font-family: bob2;
+}
+
+#nav {
+    background: linear-gradient(56deg,rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px black;
+    z-index: 10;
+}
+
+#nav li {
+    list-style: none;
+}
+
+#nav p {
+    font-size: 20px;
+}
+
+#direita {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-right: 200px;
+}
+
+#direita a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#direita a:hover {
+    color: rgb(201, 202, 202);
+}
+
+#esquerda {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/bob.jpg);
+    background-size: cover;
+    background-position: 79px;
+    border-radius: 30px;
+}
+
+
+/* Conteúdo */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/backgroundBob.png);
+    background-size: 100%;
+    height: 865px;
+}
+
+#quiz {
+    /* border-color: #300604; */
+    /* border-style: solid; */
+    background-image: url(../img/);
+    background-size: cover;
+    font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color:white;
+    width: 1000px;
+    height: 600px;
+    border-radius: 15px;
+    z-index: 1;
+} 
+
+#questaoNum {
+    
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: black;
+    position: fixed;
+    margin-bottom: 525px;
+    background-color: white;
+    z-index: 1;
+
+}
+
+#linha {
+
+    position: fixed;
+    width: 1000px;
+    border-width: 1px;
+    border-color: black;
+    border-style: dashed;
+    margin-bottom: 525px;
+    opacity: 0;
+
+}
+
+#comecar {
+    position: fixed;
+    margin-right: 0px;
+}
+
+#comecar button{
+
+    font-size: 50px;
+    background: linear-gradient(56deg,rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
+    border-style: none;
+    border-radius: 30px;
+    width: 300px;
+    cursor: pointer;
+
+}
+
+#comecar button:hover {
+
+    background: #36b0c9;
+
+}
+
+/* #divImg {
+
+    margin-top: 30px;
+    background-image: url(../img/backgroundAberto.jpeg);
+    width: 500px;
+    height: 300px;
+
+} */
+
+#divPergunta {
+    font-family: 'Poppins';
+    font-size: 50px;
+
+}
+
+#divOpcoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 700px;
+    height: 300px;
+}
+
+#divOpcoes #divOpcao {
+    font-family: 'Poppins';
+    background-color: white;
+    border-color: rgb(214, 214, 214);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 325px;
+    height: 100px;
+    position: relative;
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+#botaoEnviar {
+    opacity: 0;
+}
+
+#divOpcoes {
+    opacity: 0;
+    z-index: -1;
+}
+
+#divOpcoes input[type='radio']{
+
+    appearance: none;
+
+}
+
+
+
+/* Footer */
+#footer {
+    background-image: url(../img/backgroundAreia.png);
+    background-size: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
