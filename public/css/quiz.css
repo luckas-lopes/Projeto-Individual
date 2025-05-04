@@ -3,18 +3,18 @@
 @font-face {
     font-family: bob;
     src: url(../font/KrabbyPatty.ttf);
- }
+}
 
- @font-face {
+@font-face {
     font-family: bob2;
     src: url(../font/freckle-face-regular.ttf);
- }
+}
 
 body {
     margin: 0;
 }
 
-header {  
+header {
     width: 100%;
 }
 
@@ -27,7 +27,7 @@ header {
 }
 
 #nav {
-    background: linear-gradient(56deg,rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
+    background: linear-gradient(56deg, rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
     width: 100%;
     position: fixed;
     display: flex;
@@ -53,7 +53,7 @@ header {
     padding-right: 200px;
 }
 
-#direita a{
+#direita a {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
@@ -99,15 +99,15 @@ header {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    background-color:white;
+    background-color: white;
     width: 1000px;
     height: 600px;
     border-radius: 15px;
     z-index: 1;
-} 
+}
 
 #questaoNum {
-    
+
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -142,14 +142,16 @@ header {
     margin-right: 0px;
 }
 
-#comecar button{
+#comecar button {
 
     font-size: 50px;
-    background: linear-gradient(56deg,rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
+    background: linear-gradient(56deg, rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
     border-style: none;
     border-radius: 30px;
     width: 300px;
     cursor: pointer;
+    z-index: 100;
+
 
 }
 
@@ -202,17 +204,104 @@ header {
     opacity: 0;
 }
 
+#botaoVoltar {
+    opacity: 0;    
+}
+
 #divOpcoes {
     opacity: 0;
     z-index: -1;
 }
 
-#divOpcoes input[type='radio']{
+#divOpcoes input[type='radio'] {
 
     appearance: none;
 
 }
 
+#divResultado {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    position: fixed;
+    text-align: center;
+    z-index: -2;
+
+}
+
+#divResultado #palavra {
+
+    font-size: 50px;
+    margin-bottom: 100px;
+
+}
+
+#linhaResultado {
+    position: absolute;
+    z-index: 100;
+
+}
+
+#resultados {
+    display: flex;
+    flex-wrap: wrap;
+    width: 850px;
+    height: 300px;
+    margin-left: 150px;
+    margin-bottom: 180px;
+
+}
+
+#divGrafico {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin-left: -50px;
+    margin-right: 100px;
+}
+
+#valorGrafico {
+
+    position: absolute;
+    margin-top: 120px;
+    font-size: 40px;
+    color: white;
+
+}
+
+#grafico {
+    width: 300px;
+}
+
+#divLegendaResultados {
+
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    text-align: start;
+
+}
+
+#divLegendaResultados #frase {
+
+    font-size: 30px;
+
+}
+
+#divLegendaResultados p {
+
+    font-size: 15px;
+
+}
+
+#divJogarNovamente {
+
+    position: fixed;
+    margin-top: 550px;
+    margin-left: 432.5px;
+
+
+}
 
 
 /* Footer */
