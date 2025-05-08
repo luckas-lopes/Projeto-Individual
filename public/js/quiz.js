@@ -18,24 +18,24 @@ const listaDePerguntas = [{
     opcao4: 'Opção 4 - 2',
     correta: '1'
 
-},
-{
-    numQuestao: '3',
-    pergunta: 'Pergunta 3',
-    opcao1: 'Opção 1',
-    opcao2: 'Opção 2',
-    opcao3: 'Opção 3',
-    opcao4: 'Opção 4',
-    correta: '4'
 
-}, {
-    numQuestao: '4',
-    pergunta: 'Pergunta 4',
-    opcao1: 'Opção 1',
-    opcao2: 'Opção 2',
-    opcao3: 'Opção 3',
-    opcao4: 'Opção 4',
-    correta: '3'
+// {
+//     numQuestao: '3',
+//     pergunta: 'Pergunta 3',
+//     opcao1: 'Opção 1',
+//     opcao2: 'Opção 2',
+//     opcao3: 'Opção 3',
+//     opcao4: 'Opção 4',
+//     correta: '4'
+
+// }, {
+//     numQuestao: '4',
+//     pergunta: 'Pergunta 4',
+//     opcao1: 'Opção 1',
+//     opcao2: 'Opção 2',
+//     opcao3: 'Opção 3',
+//     opcao4: 'Opção 4',
+//     correta: '3'
 }];
 
 var questao = 0;
@@ -43,12 +43,49 @@ var acertos = 0;
 var opcoesSelecionadas = [];
 var opcaoSelecionada = [false, false, false, false];
 
-function clicou() {
+function clicou(opcao) {
+
+    document.getElementById('divOpcao1').style.borderColor = 'rgb(214, 214, 214)';
+    document.getElementById('divOpcao1').style.borderWidth = '1px';
+
+    document.getElementById('divOpcao2').style.borderColor = 'rgb(214, 214, 214)';
+    document.getElementById('divOpcao2').style.borderWidth = '1px';
+
+    document.getElementById('divOpcao3').style.borderColor = 'rgb(214, 214, 214)';
+    document.getElementById('divOpcao3').style.borderWidth = '1px';
+
+    document.getElementById('divOpcao4').style.borderColor = 'rgb(214, 214, 214)';
+    document.getElementById('divOpcao4').style.borderWidth = '1px';
+
     opcaoSelecionada = [document.getElementById('iptOpt1').checked, document.getElementById('iptOpt2').checked, document.getElementById('iptOpt3').checked, document.getElementById('iptOpt4').checked]
-    opcoesSelecionadas[questao] = opcaoSelecionada.findIndex(num => num == true);
+    opcoesSelecionadas[questao] = opcaoSelecionada.indexOf(true);
+    if (opcao == 1){
+        document.getElementById('divOpcao1').style.borderColor = 'rgb(54, 176, 201)';
+        document.getElementById('divOpcao1').style.borderWidth = '3px';
+
+    } else if (opcao == 2){
+        document.getElementById('divOpcao2').style.borderColor = 'rgb(54, 176, 201)';
+        document.getElementById('divOpcao2').style.borderWidth = '3px';
+        
+    } else if (opcao == 3){
+        document.getElementById('divOpcao3').style.borderColor = 'rgb(54, 176, 201)';
+        document.getElementById('divOpcao3').style.borderWidth = '3px';
+         
+    } else if (opcao == 4){
+        document.getElementById('divOpcao4').style.borderColor = 'rgb(54, 176, 201)';
+        document.getElementById('divOpcao4').style.borderWidth = '3px';
+        
+    }
 }
 
 function comecar() {
+
+    document.getElementById('divOpcao1').style.cursor = 'pointer';
+    document.getElementById('divOpcao2').style.cursor = 'pointer';
+    document.getElementById('divOpcao3').style.cursor = 'pointer';
+    document.getElementById('divOpcao4').style.cursor = 'pointer';
+    document.getElementById('botaoVoltar').style.cursor = 'pointer';
+    document.getElementById('botaoEnviar').style.cursor = 'pointer';
 
     document.getElementById('divPergunta').innerHTML = listaDePerguntas[0].pergunta;
     document.getElementById('cOpcao1').innerHTML = listaDePerguntas[0].opcao1;
@@ -67,6 +104,18 @@ function comecar() {
 }
 
 function atualizarPergunta() {
+
+    document.getElementById('divOpcao1').style.borderColor = 'rgb(214, 214, 214)';
+    document.getElementById('divOpcao1').style.borderWidth = '1px';
+
+    document.getElementById('divOpcao2').style.borderColor = 'rgb(214, 214, 214)';
+    document.getElementById('divOpcao2').style.borderWidth = '1px';
+
+    document.getElementById('divOpcao3').style.borderColor = 'rgb(214, 214, 214)';
+    document.getElementById('divOpcao3').style.borderWidth = '1px';
+
+    document.getElementById('divOpcao4').style.borderColor = 'rgb(214, 214, 214)';
+    document.getElementById('divOpcao4').style.borderWidth = '1px';
 
     questao++;
 
@@ -88,6 +137,8 @@ function atualizarPergunta() {
     document.getElementById('cOpcao2').innerHTML = perguntaAtual.opcao2;
     document.getElementById('cOpcao3').innerHTML = perguntaAtual.opcao3;
     document.getElementById('cOpcao4').innerHTML = perguntaAtual.opcao4;
+
+    opcaoSelecionada = [false, false, false, false];
 
 }
 
