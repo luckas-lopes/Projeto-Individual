@@ -1,0 +1,17 @@
+#container {
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+
+}
+
+.botao {
+    margin: 1px;
+    width: 24%;
+    height: 24%;
+
+}

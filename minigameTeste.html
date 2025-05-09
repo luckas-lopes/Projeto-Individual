@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="minigameTeste.css">
+    <title>Minigame Teste</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div onclick="clicou(1)" id="botao1" class="botao"></div>
+        <div onclick="clicou(2)" id="botao2" class="botao"></div>
+        <div onclick="clicou(3)" id="botao3" class="botao"></div>
+        <div onclick="clicou(4)" id="botao4" class="botao"></div>
+        <div onclick="clicou(5)" id="botao5" class="botao"></div>
+        <div onclick="clicou(6)" id="botao6" class="botao"></div>
+        <div onclick="clicou(7)" id="botao7" class="botao"></div>
+        <div onclick="clicou(8)" id="botao8" class="botao"></div>
+        <div onclick="clicou(9)" id="botao9" class="botao"></div>
+        <div onclick="clicou(10)" id="botao10" class="botao"></div>
+        <div onclick="clicou(11)" id="botao11" class="botao"></div>
+        <div onclick="clicou(12)" id="botao12" class="botao"></div>
+        <div onclick="clicou(13)" id="botao13" class="botao"></div>
+        <div onclick="clicou(14)" id="botao14" class="botao"></div>
+        <div onclick="clicou(15)" id="botao15" class="botao"></div>
+        <div onclick="clicou(16)" id="botao16" class="botao"></div>
+
+    </div>
+
+    <button onclick="comecar()">Começar</button>
+
+    <div id="divContador"></div>
+
+</body>
+
+</html>
+
+<script>
+    
+    var botoes = ['botao1', 'botao2', 'botao3', 'botao4', 'botao5', 'botao6', 'botao7', 'botao8', 'botao9', 'botao10', 'botao11', 'botao12', 'botao13', 'botao14', 'botao15', 'botao16'];
+    var opcao1 = 0;
+    var opcao2 = 0;
+    var segundos = 0;
+
+    
+    function comecar() {
+        
+        setInterval(finalizar, 5000);
+        setInterval(contador, 1000);
+
+        segundos = 5;
+
+        for (var i = 0; i < botoes.length; i++) {
+
+            var botaoAtual = botoes[i];
+            document.getElementById(botaoAtual).style.backgroundColor = 'Transparent'
+
+        }
+
+        for (var i = 0; i < botoes.length; i++) {
+            var botaoAtual = botoes[i];
+            var num = Math.round(Math.random());
+
+            if (num == 0) {
+                document.getElementById(botaoAtual).style.backgroundColor = 'Blue'
+
+            } else if (num == 1) {
+                document.getElementById(botaoAtual).style.backgroundColor = 'Green'
+
+            }
+        }
+
+    }
+
+    function atualizar() {
+
+        for (var i = 0; i < botoes.length; i++) {
+
+            var botaoAtual = botoes[i];
+            document.getElementById(botaoAtual).style.backgroundColor = 'Transparent'
+
+        }
+
+        for (var i = 0; i < botoes.length; i++) {
+            var botaoAtual = botoes[i];
+            var num = Math.round(Math.random());
+
+            if (num == 0) {
+                document.getElementById(botaoAtual).style.backgroundColor = 'Blue'
+
+            } else if (num == 1) {
+                document.getElementById(botaoAtual).style.backgroundColor = 'Green'
+
+            }
+        }
+
+    }
+
+    function clicou(botao) {
+
+        opcao1 = 0;
+        opcao2 = 0;
+
+        if (document.getElementById(botoes[botao - 1]).style.backgroundColor == 'blue') {
+            document.getElementById(botoes[botao - 1]).style.backgroundColor = 'Green'
+
+        } else if (document.getElementById(botoes[botao - 1]).style.backgroundColor == 'green') {
+            document.getElementById(botoes[botao - 1]).style.backgroundColor = 'Blue'
+
+        }
+
+        for (var i = 0; i < botoes.length; i++) {
+
+            if (document.getElementById(botoes[i]).style.backgroundColor == 'blue') {
+                opcao1++;
+            } else if (document.getElementById(botoes[i]).style.backgroundColor == 'green') {
+                opcao2++;
+            }
+
+        }
+
+        if ((opcao1 == 16) || (opcao2 == 16)) {
+            atualizar();
+        }
+    }
+
+    function finalizar() {
+
+        document.getElementById('container').remove();
+        document.getElementById('divContador').remove();
+
+
+    }
+
+
+    function contador() {
+        
+        segundos--;
+
+        document.getElementById('divContador').innerHTML = segundos;
+
+    }
+    
+</script>

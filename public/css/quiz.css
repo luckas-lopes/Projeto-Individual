@@ -118,7 +118,7 @@ header {
     border-style: solid;
     border-radius: 30px;
     border-color: black;
-    position: fixed;
+    position: absolute;
     margin-bottom: 525px;
     background-color: white;
     z-index: 1;
@@ -127,7 +127,7 @@ header {
 
 #linha {
 
-    position: fixed;
+    position: absolute;
     width: 1000px;
     border-width: 1px;
     border-color: black;
@@ -138,16 +138,18 @@ header {
 }
 
 #comecar {
-    position: fixed;
+    position: absolute;
     margin-right: 0px;
 }
 
 #comecar button {
-
+    
+    text-shadow: 2px 2px rgb(47, 39, 204);
+    color: white;
     font-size: 50px;
     background: linear-gradient(56deg, rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
     border-style: none;
-    border-radius: 30px;
+    border-radius: 15px;
     width: 300px;
     cursor: pointer;
     z-index: 100;
@@ -184,7 +186,7 @@ header {
     height: 300px;
 }
 
-#divOpcoes #divOpcao {
+#divOpcoes .divOpcao {
     font-family: 'Poppins';
     background-color: white;
     border-color: rgb(214, 214, 214);
@@ -198,14 +200,28 @@ header {
     position: relative;
     font-size: 20px;
     margin-top: 12px;
+    /* cursor: pointer; */
 }
 
 #botaoEnviar {
     opacity: 0;
+    padding: 10px;
+    background-color: #36b0c9;
+    border-radius: 10px;
+    width: 100px;
+    border-style: none;
+    color: white;
+
 }
 
 #botaoVoltar {
-    opacity: 0;    
+    opacity: 0;
+    padding: 10px;
+    background-color: #36b0c9;
+    border-radius: 10px;
+    width: 100px;
+    border-style: none;
+    color: white;
 }
 
 #divOpcoes {
@@ -223,7 +239,7 @@ header {
     display: flex;
     flex-direction: column;
     opacity: 0;
-    position: fixed;
+    position: absolute;
     text-align: center;
     z-index: -2;
 
@@ -296,13 +312,15 @@ header {
 
 #divJogarNovamente {
 
-    position: fixed;
+    position: absolute;
     margin-top: 550px;
     margin-left: 432.5px;
 
 
 }
-
+#botaoVoltar{
+    
+}
 
 /* Footer */
 #footer {

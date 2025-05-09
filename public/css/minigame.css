@@ -1,0 +1,105 @@
+@font-face {
+    font-family: bob;
+    src: url(../font/KrabbyPatty.ttf);
+ }
+
+ @font-face {
+    font-family: bob2;
+    src: url(../font/freckle-face-regular.ttf);
+ }
+
+body {
+    margin: 0;
+}
+
+header {  
+    width: 100%;
+}
+
+.fonte1 {
+    font-family: bob;
+}
+
+.fonte2 {
+    font-family: bob2;
+}
+
+#nav {
+    background: linear-gradient(56deg,rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px black;
+    z-index: 10;
+}
+
+#nav li {
+    list-style: none;
+}
+
+#nav p {
+    font-size: 20px;
+}
+
+#direita {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-right: 200px;
+}
+
+#direita a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#direita a:hover {
+    color: rgb(201, 202, 202);
+}
+
+#esquerda {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/bob.jpg);
+    background-size: cover;
+    background-position: 79px;
+    border-radius: 30px;
+}
+
+
+/* Conteúdo */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/backgroundBob.png);
+    background-size: 100%;
+    height: 2000px;
+}
+
+#minigame {
+    background-color: white;
+    width: 1200px;
+    height: 1700px;
+    border-radius: 15px;
+} 
+
+/* Footer */
+#footer {
+    background-image: url(../img/backgroundAreia.png);
+    background-size: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
