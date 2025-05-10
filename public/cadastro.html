@@ -11,32 +11,29 @@
     <title>Cadastro</title>
 </head>
 
-
-<header>
-    <!-- Nav -->
-    <div id="nav">
-        <div id="esquerda">
-            <a href="./index.html">
-                <div id="logo"></div>
-            </a>
-        </div>
-        <div id="direita">
-            <li><a href="index.html">
-                    <p class="fonte1">Home</p>
-                </a></li>
-            <li><a href="./sobre.html">
-                    <p class="fonte1">Sobre</p>
-                </a></li>
-            |
-            <li><a href="./login.html">
-                    <p class="fonte1">Login</p>
-                </a></li>
-            <li><a href="./cadastro.html">
-                    <p class="fonte1">Cadastro</p>
-                </a> </li>
-        </div>
+<!-- Nav -->
+<div id="nav">
+    <div id="esquerda">
+        <a href="./index.html">
+            <div id="logo"></div>
+        </a>
     </div>
-</header>
+    <div id="direita">
+        <li><a href="index.html">
+                <p class="fonte1">Home</p>
+            </a></li>
+        <li><a href="./sobre.html">
+                <p class="fonte1">Sobre</p>
+            </a></li>
+        |
+        <li><a href="./login.html">
+                <p class="fonte1">Login</p>
+            </a></li>
+        <li><a href="./cadastro.html">
+                <p class="fonte1">Cadastro</p>
+            </a> </li>
+    </div>
+</div>
 
 <body>
     <!-- Conteúdo  -->
@@ -64,17 +61,20 @@
                         </label>
                         <label>
                             <p>Email</p>
-                            <input type="text" onblur="validarEmailErrado()" oninput="validarEmailCorreto()" id="iptEmail">
+                            <input type="text" onblur="validarEmailErrado()" oninput="validarEmailCorreto()"
+                                id="iptEmail">
                             <div id="legendaEmail"></div>
                         </label>
                         <label>
                             <p>Senha</p>
-                            <input onblur="validarSenhaErrado()" oninput="validarSenhaCorreto()" type="password" id="iptSenha">
+                            <input onblur="validarSenhaErrado()" oninput="validarSenhaCorreto()" type="password"
+                                id="iptSenha">
                             <div id="legendaSenha"></div>
                         </label>
                         <label>
                             <p>Confirme sua senha</p>
-                            <input type="password" onblur="validarConfirmarSenhaErrado()" oninput="validarConfirmarSenhaCorreto()" id="iptConfirmarSenha">
+                            <input type="password" onblur="validarConfirmarSenhaErrado()"
+                                oninput="validarConfirmarSenhaCorreto()" id="iptConfirmarSenha">
                             <div id="legendaConfirmarSenha"></div>
                         </label>
                         <button>Entrar</button>
@@ -93,4 +93,5 @@
     </div>
 
 </body>
+
 </html>

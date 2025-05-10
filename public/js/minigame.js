@@ -18,6 +18,7 @@ function comecar() {
     intervaloFinalizar = setTimeout(finalizar, segundos * 1000);
     intervaloContador = setInterval(contador, 1000);
 
+    document.getElementById('contador').innerHTML += '<div id="divContador"></div>';
     document.getElementById('botaoComecar').disabled = true;
 
     atualizar();
@@ -25,6 +26,8 @@ function comecar() {
 }
 
 function atualizar() {
+
+    pontuacao += 300;
 
     if (numBotoes == 0) {
         for (var i = 0; i < botoes4x4.length; i++) {
@@ -104,7 +107,58 @@ function atualizar() {
 
     }
 
-    pontuacao += 300;
+    if (numBotoes == 0) {
+
+        for (var i = 0; i < botoes4x4.length; i++) {
+
+            if (document.getElementById(botoes4x4[i]).innerHTML == img1) {
+                opcao1++;
+            } else if (document.getElementById(botoes4x4[i]).innerHTML == img2) {
+                opcao2++;
+            }
+
+        }
+
+        if ((opcao1 == 16) || (opcao2 == 16)) {
+
+            atualizar();
+        }
+
+    } else if (numBotoes == 1) {
+
+        for (var i = 0; i < botoes2x2.length; i++) {
+
+            if (document.getElementById(botoes2x2[i]).innerHTML == img1) {
+                opcao1++;
+            } else if (document.getElementById(botoes2x2[i]).innerHTML == img2) {
+                opcao2++;
+            }
+
+        }
+
+        if ((opcao1 == 4) || (opcao2 == 4)) {
+
+            atualizar();
+        }
+    } else if (numBotoes == 2) {
+
+        for (var i = 0; i < botoes5x5.length; i++) {
+
+            if (document.getElementById(botoes5x5[i]).innerHTML == img1) {
+                opcao1++;
+            } else if (document.getElementById(botoes5x5[i]).innerHTML == img2) {
+                opcao2++;
+            }
+
+        }
+
+        if ((opcao1 == 25) || (opcao2 == 25)) {
+
+            atualizar();
+        }
+    }
+
+
 
 
     atualizarContador();

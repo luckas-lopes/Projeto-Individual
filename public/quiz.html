@@ -11,32 +11,30 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Quiz</title>
 </head>
-<header>
-
-    <!-- Nav -->
-    <div id="nav">
-        <div id="esquerda">
-            <a href="./index.html">
-                <div id="logo"></div>
-            </a>
-        </div>
-        <div id="direita">
-            <li><a href="./index.html">
-                    <p class="fonte1">Home</p>
-                </a></li>
-            <li><a href="./sobre.html">
-                    <p class="fonte1">Sobre</p>
-                </a></li>
-            |
-            <li><a href="./login.html">
-                    <p class="fonte1">Login</p>
-                </a></li>
-            <li><a href="./cadastro.html">
-                    <p class="fonte1">Cadastro</p>
-                </a> </li>
-        </div>
+<!-- Nav -->
+<div id="nav">
+    <div id="esquerda">
+        <a href="./index.html">
+            <div id="logo"></div>
+        </a>
     </div>
-</header>
+    <div id="direita">
+        <li><a href="./index.html">
+                <p class="fonte1">Home</p>
+            </a></li>
+        <li><a href="./sobre.html">
+                <p class="fonte1">Sobre</p>
+            </a></li>
+        |
+        <li><a href="./login.html">
+                <p class="fonte1">Login</p>
+            </a></li>
+        <li><a href="./cadastro.html">
+                <p class="fonte1">Cadastro</p>
+            </a> </li>
+    </div>
+</div>
+
 
 <body>
 
@@ -91,7 +89,9 @@
                 <div id="divResultado">
                     <p id="palavra">Resultados</p>
                     <div id="resultados">
-                        <div id="divGrafico"><p id="valorGrafico">Num</p><canvas id="grafico"></canvas></div>
+                        <div id="divGrafico">
+                            <p id="valorGrafico">Num</p><canvas id="grafico"></canvas>
+                        </div>
                         <div id="divLegendaResultados">
                             <p id="frase">Frase Bonitinha</p>
                             <p id="erradas"></p>
@@ -99,7 +99,8 @@
                         </div>
                     </div>
                     <div id="divJogarNovamente">
-                        <button id="botaoJogarNovamente" onclick="reiniciar(), comecar()" disabled>Jogar Novamente</button>
+                        <button id="botaoJogarNovamente" onclick="reiniciar(), comecar()" disabled>Jogar
+                            Novamente</button>
                     </div>
                 </div>
             </div>
