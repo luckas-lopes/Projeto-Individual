@@ -7,33 +7,54 @@
     <link rel="stylesheet" href="./css/bolhas.css">
     <link rel="stylesheet" href="./css/minigame.css">
     <script src="./js/bolhas.js"></script>
+    <script src="./js/minigame.js"></script>
     <title>Minigame</title>
 </head>
-<header>
+
+<body>
 
     <!-- Nav -->
     <div id="nav">
         <div id="esquerda">
-            <a href="./index.html"><div id="logo"></div></a>
+            <a href="./index.html">
+                <div id="logo"></div>
+            </a>
         </div>
         <div id="direita">
-            <li><a href="./index.html"><p class="fonte1">Home</p></a></li>
-            <li><a href="./sobre.html"><p class="fonte1">Sobre</p></a></li>
+            <li><a href="./index.html">
+                    <p class="fonte1">Home</p>
+                </a></li>
+            <li><a href="./sobre.html">
+                    <p class="fonte1">Sobre</p>
+                </a></li>
             |
-            <li><a href="./login.html"><p class="fonte1">Login</p></a></li>
-            <li><a href="./cadastro.html"><p class="fonte1">Cadastro</p></a> </li>
+            <li><a href="./login.html">
+                    <p class="fonte1">Login</p>
+                </a></li>
+            <li><a href="./cadastro.html">
+                    <p class="fonte1">Cadastro</p>
+                </a> </li>
         </div>
     </div>
-</header>
-
-<body>
-
 
     <!-- Conteúdo  -->
     <div id="container">
         <section>
 
-            <div id="minigame">
+            <div id="conteudo">
+
+                <div id="tela">
+
+                    <div id="minigame"></div>
+
+                    <div id="botoes">
+                        <button id="botaoJogarNovamente" onclick="reiniciar()" disabled=true>Jogar Novamente</button>
+                        <button id="botaoComecar" onclick="comecar()">Começar</button>
+                    </div>
+
+                    <div id="divContador"></div>
+
+                </div>
 
             </div>
 
@@ -49,7 +70,7 @@
 
 <script>
 
-    
+
 
 
 </script>
