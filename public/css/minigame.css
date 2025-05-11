@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
     font-family: bob;
     src: url(../font/KrabbyPatty.ttf);
- }
+}
 
- @font-face {
+@font-face {
     font-family: bob2;
     src: url(../font/freckle-face-regular.ttf);
- }
+}
 
 body {
     margin: 0;
@@ -22,7 +24,7 @@ body {
 }
 
 #nav {
-    background: linear-gradient(56deg,rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
+    background: linear-gradient(56deg, rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
     width: 100%;
     position: fixed;
     display: flex;
@@ -49,7 +51,7 @@ body {
     padding-right: 200px;
 }
 
-#direita a{
+#direita a {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
@@ -86,18 +88,25 @@ body {
 }
 
 #conteudo {
+    background-image: url('../img/abacaxi.jpeg');
+    background-size: cover;
     background-color: white;
-    width: 1200px;
-    height: 750px;
+    width: 120vh;
+    height: 70vh;
     border-radius: 15px;
+    border-color: rgb(5, 0, 99);
+    border-width: 2px;
+    border-style: solid;
     margin-top: 50px;
     z-index: 1;
-} 
+    border-color: #ac2712;
+}
 
 #tela {
 
     margin-top: 100px;
     width: 100%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,13 +115,18 @@ body {
 }
 
 #minigame {
-    width: 500px;
-    height: 500px;
-    background-color: rgb(54, 176, 201);
+
+    width: 50vh;
+    height: 50vh;
+    background-color: #de8324;
+    /* opacity: 0.9; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     border-style: solid;
+    border-color: #ac2712;
+    border-radius: 30px;
     box-sizing: border-box;
 }
 
@@ -124,6 +138,42 @@ body {
     border-style: solid;
     background-color: white;
     box-sizing: border-box;
+    background-image: url('../img/backgroundPintura.png');
+    background-size: cover;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#botao1-5x5 {
+    border-top-left-radius: 30px;
+}
+
+#botao5-5x5 {
+    border-top-right-radius: 30px;
+}
+
+#botao21-5x5 {
+    border-bottom-left-radius: 30px;
+}
+
+#botao25-5x5 {
+    border-bottom-right-radius: 30px;
+}
+
+#botao1-5x5 img {
+    border-top-left-radius: 30px;
+}
+
+#botao5-5x5 img {
+    border-top-right-radius: 30px;
+}
+
+#botao21-5x5 img {
+    border-bottom-left-radius: 30px;
+}
+
+#botao25-5x5 img {
+    border-bottom-right-radius: 30px;
 }
 
 .botao4x4 {
@@ -134,7 +184,42 @@ body {
     border-style: solid;
     background-color: white;
     box-sizing: border-box;
+    background-image: url('../img/backgroundPintura.png');
+    background-size: cover;
+    z-index: 0;
+    overflow: hidden;
+}
 
+#botao1-4x4 {
+    border-top-left-radius: 30px;
+}
+
+#botao4-4x4 {
+    border-top-right-radius: 30px;
+}
+
+#botao13-4x4 {
+    border-bottom-left-radius: 30px;
+}
+
+#botao16-4x4 {
+    border-bottom-right-radius: 30px;
+}
+
+#botao1-4x4 img {
+    border-top-left-radius: 30px;
+}
+
+#botao4-4x4 img {
+    border-top-right-radius: 30px;
+}
+
+#botao13-4x4 img {
+    border-bottom-left-radius: 30px;
+}
+
+#botao16-4x4 img {
+    border-bottom-right-radius: 30px;
 }
 
 .botao2x2 {
@@ -145,13 +230,51 @@ body {
     border-style: solid;
     background-color: white;
     box-sizing: border-box;
-
+    background-image: url('../img/backgroundPintura.png');
+    background-size: cover;
+    z-index: 0;
+    overflow: hidden;
 }
+
+#botao1-2x2 {
+    border-top-left-radius: 30px;
+}
+
+#botao2-2x2 {
+    border-top-right-radius: 30px;
+}
+
+#botao3-2x2 {
+    border-bottom-left-radius: 30px;
+}
+
+#botao4-2x2 {
+    border-bottom-right-radius: 30px;
+}
+
+#botao1-2x2 img {
+    border-top-left-radius: 30px;
+}
+
+#botao2-2x2 img {
+    border-top-right-radius: 30px;
+}
+
+#botao3-2x2 img {
+    border-bottom-left-radius: 30px;
+}
+
+#botao4-2x2 img {
+    border-bottom-right-radius: 30px;
+}
+
 
 #textoPontuacao {
 
-    font-size: 60px;
+    font-family: 'Poppins';
+    font-size: 4vh;
     align-self: center;
+    color: white;
 
 }
 
@@ -161,25 +284,67 @@ body {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    width: 500px;
-    height: 35px;
+    width: 50vh;
+    height: 4.7vh;
     border-width: 3px;
-    border-color: black;
+    border-color: #ac2712;
     border-style: solid;
     box-sizing: border-box;
-    
+    margin-bottom: 10px;
+
 }
 
 .segundosContador {
-
-    background-color: rgb(54, 176, 201);
-    width: 32.93px;
-    height: 30px;
+    background-color: #e6c04f;
+    width: 6.666666666666666666667%;
+    height: 4vh;
     border-width: 1px;
     border-color: black;
     border-style: solid;
     box-sizing: border-box;
 }
+
+#botaoComecar {
+    border-radius: 10px;
+    height: 4vh;
+    width: 10vh;
+    background-color: #ce511f;
+    border-color: #ac2712;
+    font-size: 1.5vh;
+    border-style: solid;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#botaoComecar:hover {
+    background-color: rgb(87, 139, 217);
+}
+
+#botaoJogarNovamente {
+    margin-top: 10px;
+    background-color: #ce511f;
+    border-color: #ac2712;
+    border-radius: 10px;
+    height: 4vh;
+    width: 15vh;
+    font-size: 1.5vh;
+    border-style: solid;
+    color: white;
+    cursor: pointer;
+
+}
+
+#botaoJogarNovamente:hover {
+    background-color: rgb(87, 139, 217);
+}
+
+#botoes {
+
+    margin-bottom: 20px;
+
+}
+
 
 /* Footer */
 #footer {
