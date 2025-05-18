@@ -88,6 +88,7 @@ body {
 }
 
 #quiz {
+    margin-top: 75px;
     position: relative;
     background-image: url(../img/);
     background-size: cover;
@@ -97,9 +98,11 @@ body {
     justify-content: space-evenly;
     flex-direction: column;
     background-color: white;
+    background-image: url('../img/backgroundRoxo.jpeg');
     width: 100vh;
-    height: 60vh;
+    height: 70vh;
     border-radius: 15px;
+    border: 2px, #7e279f, solid;
     z-index: 1;
 }
 
@@ -109,15 +112,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 3%;
+    height: 5%;
     border-width: 1px;
     border-style: solid;
-    border-radius: 30px;
+    border-radius: 50%;
+    font-size: 1.5vh;
     border-color: black;
     position: absolute;
-    margin-bottom: 525px;
-    background-color: white;
+    bottom: 92.5%;
+    background-color: #e487e2;
     z-index: 1;
 
 }
@@ -128,9 +132,9 @@ body {
     width: 100%;
     border-width: 1px;
     border-color: black;
-    border-style: dashed;
-    margin-bottom: 525px;
+    border-style: solid;
     opacity: 0;
+    bottom: 95%;
 
 }
 
@@ -140,12 +144,12 @@ body {
 }
 
 #comecar button {
-    
-    text-shadow: 2px 2px rgb(47, 39, 204);
+
+    border: 2px, #632ec3, solid;
+    background-color: #7b44fa;
+    text-shadow: 2px 2px #c167ca;
     color: white;
     font-size: 50px;
-    background: linear-gradient(56deg, rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
-    border-style: none;
     border-radius: 15px;
     width: 300px;
     cursor: pointer;
@@ -154,31 +158,39 @@ body {
 
 }
 
+
+
 #comecar button:hover {
 
-    background: #36b0c9;
+    background: #976bff;
 
 }
 
 #divPergunta {
-    font-family: 'Poppins';
-    font-size: 50px;
+
+    font-family: 'bob2';
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow: black -2px 4px 1px;
+    margin-top: 5%;
+
 
 }
 
 #divOpcoes {
+
     display: flex;
+    margin-top: 5%;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 700px;
     height: 300px;
+
 }
 
 #divOpcoes .divOpcao {
     font-family: 'Poppins';
-    background-color: white;
-    border-color: rgb(214, 214, 214);
-    border-style: solid;
+    color: white;
     border-width: 1px;
     border-radius: 8px;
     display: flex;
@@ -188,13 +200,16 @@ body {
     position: relative;
     font-size: 20px;
     margin-top: 12px;
-    /* cursor: pointer; */
+    border: 2px, #632ec3, solid;
+    background-color: #7b44fa;
+    box-sizing: border-box;
+
 }
 
 #botaoEnviar {
     opacity: 0;
     padding: 10px;
-    background-color: #36b0c9;
+    background-color: #7b44fa;
     border-radius: 10px;
     width: 100px;
     border-style: none;
@@ -205,7 +220,7 @@ body {
 #botaoVoltar {
     opacity: 0;
     padding: 10px;
-    background-color: #36b0c9;
+    background-color: #7b44fa;
     border-radius: 10px;
     width: 100px;
     border-style: none;
@@ -224,19 +239,25 @@ body {
 }
 
 #divResultado {
+    margin-top: 5%;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'bob';
     display: flex;
     flex-direction: column;
     opacity: 0;
     position: absolute;
     text-align: center;
     z-index: -2;
+    height: 80%;
 
 }
 
 #divResultado #palavra {
 
+    margin-top: -5%;
     font-size: 50px;
-    margin-bottom: 100px;
+    height: 50px;
 
 }
 
@@ -260,8 +281,19 @@ body {
     display: flex;
     justify-content: center;
     width: 400px;
+    margin-top: -125px;
     margin-left: -50px;
     margin-right: 100px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+}
+
+#divGrafico p {
+    font-size: 30px;
+    width: 500px;
+    height: 30px;
 }
 
 #valorGrafico {
@@ -275,14 +307,22 @@ body {
 
 #grafico {
     width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
+
+
 
 #divLegendaResultados {
 
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 300px;
+    height: 500px;
     text-align: start;
+    margin-top: -10px;
+    margin-left: 75px;
 
 }
 
@@ -298,13 +338,35 @@ body {
 
 }
 
+#imgResultado {
+
+    width: 250px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px, #7e279f, solid;
+
+}
+
 #divJogarNovamente {
 
     position: absolute;
-    margin-top: 550px;
+    margin-top: 50%;
     margin-left: 432.5px;
 
 
+}
+
+#botaoJogarNovamente {
+
+    padding: 10px;
+    background-color: #7b44fa;
+    border-radius: 10px;
+    width: 150px;
+    border-style: none;
+    color: white;
+    margin-top: -35%;
+    cursor: pointer;
 }
 
 /* Footer */

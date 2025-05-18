@@ -131,13 +131,9 @@
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
+                    sessionStorage.ID_USUARIO = json.idUsuario;
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-
-                    setTimeout(function () {
-                        window.location = "./index.html";
-                    }, 1000); // apenas para exibir o loading
 
                 });
 
@@ -147,7 +143,36 @@
             console.log(erro);
         })
 
-        return false;
+
+        fetch("/usuarios/zerarPontucao", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idUsuarioServer: sessionStorage.ID_USUARIO
+            })
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                });
+
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        setTimeout(function () {
+            window.location = "./index.html";
+        }, 1000);
     }
 
 </script>

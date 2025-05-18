@@ -1,42 +1,156 @@
-const listaDePerguntas = [{
+const listaDePerguntas = [
 
-    numQuestao: '1',
-    pergunta: 'Pergunta 1',
-    opcao1: 'Opção 1',
-    opcao2: 'Opção 2',
-    opcao3: 'Opção 3',
-    opcao4: 'Opção 4',
-    correta: '2'
+    {
+        numQuestao: '1',
+        pergunta: 'Qual é o nome do melhor amigo do Bob Esponja?',
+        opcao1: 'Lula Molusco',
+        opcao2: 'Sr. Siriguejo',
+        opcao3: 'Plankton',
+        opcao4: 'Patrick',
+        correta: '4'
+    },
 
-},
-{
-    numQuestao: '2',
-    pergunta: 'Pergunta 2',
-    opcao1: 'Opção 1 - 2',
-    opcao2: 'Opção 2 - 2',
-    opcao3: 'Opção 3 - 2',
-    opcao4: 'Opção 4 - 2',
-    correta: '1'
+    {
+        numQuestao: '2',
+        pergunta: 'Onde Bob Esponja trabalha?',
+        opcao1: 'Restaurante do Plankton',
+        opcao2: 'Pizzaria do Mar',
+        opcao3: 'Siri Cascudo',
+        opcao4: 'Lanchonete do Lula',
+        correta: '3'
+    },
 
+    {
+        numQuestao: '3',
+        pergunta: 'Quem é o dono do Siri Cascudo?',
+        opcao1: 'Sr. Siriguejo',
+        opcao2: 'Bob Esponja',
+        opcao3: 'Plankton',
+        opcao4: 'Patrick',
+        correta: '1'
+    },
 
-// {
-//     numQuestao: '3',
-//     pergunta: 'Pergunta 3',
-//     opcao1: 'Opção 1',
-//     opcao2: 'Opção 2',
-//     opcao3: 'Opção 3',
-//     opcao4: 'Opção 4',
-//     correta: '4'
+    {
+        numQuestao: '4',
+        pergunta: 'Qual é o nome da esquila cientista?',
+        opcao1: 'Laura',
+        opcao2: 'Lisa',
+        opcao3: 'Sandy',
+        opcao4: 'Sheila',
+        correta: '3'
+    },
 
-// }, {
-//     numQuestao: '4',
-//     pergunta: 'Pergunta 4',
-//     opcao1: 'Opção 1',
-//     opcao2: 'Opção 2',
-//     opcao3: 'Opção 3',
-//     opcao4: 'Opção 4',
-//     correta: '3'
-}];
+    {
+        numQuestao: '5',
+        pergunta: 'Quem tenta roubar a fórmula do hambúrguer de siri?',
+        opcao1: 'Patrick',
+        opcao2: 'Lula Molusco',
+        opcao3: 'Plankton',
+        opcao4: 'Larry',
+        correta: '3'
+    },
+
+    {
+        numQuestao: '6',
+        pergunta: 'Onde Bob Esponja mora?',
+        opcao1: 'Em um barril',
+        opcao2: 'Em um abacaxi',
+        opcao3: 'Em uma caverna',
+        opcao4: 'Em uma concha',
+        correta: '2'
+    },
+
+    {
+        numQuestao: '7',
+        pergunta: 'Qual instrumento musical Lula Molusco toca?',
+        opcao1: 'Trompete',
+        opcao2: 'Violino',
+        opcao3: 'Flauta',
+        opcao4: 'Clarinete',
+        correta: '4'
+    },
+
+    {
+        numQuestao: '8',
+        pergunta: 'Qual é o nome da cidade onde vivem?',
+        opcao1: 'Mar Azul',
+        opcao2: 'Água Clara',
+        opcao3: 'Fenda do Biquíni',
+        opcao4: 'Recife Profundo',
+        correta: '3'
+    },
+
+    {
+        numQuestao: '9',
+        pergunta: 'Qual é o pet de estimação do Bob Esponja?',
+        opcao1: 'Um polvo',
+        opcao2: 'Um caracol',
+        opcao3: 'Um peixe',
+        opcao4: 'Um cavalo-marinho',
+        correta: '2'
+    },
+
+    {
+        numQuestao: '10',
+        pergunta: 'Qual é o nome do caracol de estimação do Bob?',
+        opcao1: 'Toby',
+        opcao2: 'Spike',
+        opcao3: 'Gary',
+        opcao4: 'Leo',
+        correta: '3'
+    },
+
+    {
+        numQuestao: '11',
+        pergunta: 'Qual o prato principal do Siri Cascudo?',
+        opcao1: 'Batata frita',
+        opcao2: 'Pizza',
+        opcao3: 'Hambúrguer de siri',
+        opcao4: 'Cachorro-quente',
+        correta: '3'
+    },
+
+    {
+        numQuestao: '12',
+        pergunta: 'Quem é o vizinho ranzinza do Bob?',
+        opcao1: 'Patrick',
+        opcao2: 'Lula Molusco',
+        opcao3: 'Plankton',
+        opcao4: 'Sr. Siriguejo',
+        correta: '2'
+    },
+
+    {
+        numQuestao: '13',
+        pergunta: 'O que Sandy precisa usar para respirar no fundo do mar?',
+        opcao1: 'Óculos',
+        opcao2: 'Capacete de ar',
+        opcao3: 'Nadadeiras',
+        opcao4: 'Máscara de mergulho',
+        correta: '2'
+    },
+
+    {
+        numQuestao: '14',
+        pergunta: 'Qual é a ocupação do Bob Esponja?',
+        opcao1: 'Lavador de carros',
+        opcao2: 'Cozinheiro',
+        opcao3: 'Padeiro',
+        opcao4: 'Músico',
+        correta: '2'
+    },
+
+    {
+        numQuestao: '15',
+        pergunta: 'Qual é o lema do Sr. Siriguejo?',
+        opcao1: 'Viva a amizade',
+        opcao2: 'Trabalhe menos',
+        opcao3: 'Dinheiro em primeiro lugar',
+        opcao4: 'Comida grátis',
+        correta: '3'
+    }
+
+];
 
 var questao = 0;
 var acertos = 0;
@@ -45,37 +159,44 @@ var opcaoSelecionada = [false, false, false, false];
 
 function clicou(opcao) {
 
-    document.getElementById('divOpcao1').style.borderColor = 'rgb(214, 214, 214)';
+    document.getElementById('divOpcao1').style.backgroundColor = '#7b44fa';
     document.getElementById('divOpcao1').style.borderWidth = '1px';
 
-    document.getElementById('divOpcao2').style.borderColor = 'rgb(214, 214, 214)';
+
+    document.getElementById('divOpcao2').style.backgroundColor = '#7b44fa';
     document.getElementById('divOpcao2').style.borderWidth = '1px';
 
-    document.getElementById('divOpcao3').style.borderColor = 'rgb(214, 214, 214)';
+
+    document.getElementById('divOpcao3').style.backgroundColor = '#7b44fa';
     document.getElementById('divOpcao3').style.borderWidth = '1px';
 
-    document.getElementById('divOpcao4').style.borderColor = 'rgb(214, 214, 214)';
+
+    document.getElementById('divOpcao4').style.backgroundColor = '#7b44fa';
     document.getElementById('divOpcao4').style.borderWidth = '1px';
+
 
     opcaoSelecionada = [document.getElementById('iptOpt1').checked, document.getElementById('iptOpt2').checked, document.getElementById('iptOpt3').checked, document.getElementById('iptOpt4').checked]
     opcoesSelecionadas[questao] = opcaoSelecionada.indexOf(true);
-    if (opcao == 1){
-        document.getElementById('divOpcao1').style.borderColor = 'rgb(54, 176, 201)';
+    if (opcao == 1) {
+        document.getElementById('divOpcao1').style.backgroundColor = '#976bff';
         document.getElementById('divOpcao1').style.borderWidth = '3px';
 
-    } else if (opcao == 2){
-        document.getElementById('divOpcao2').style.borderColor = 'rgb(54, 176, 201)';
+    } else if (opcao == 2) {
+        document.getElementById('divOpcao2').style.backgroundColor = '#976bff';
         document.getElementById('divOpcao2').style.borderWidth = '3px';
-        
-    } else if (opcao == 3){
-        document.getElementById('divOpcao3').style.borderColor = 'rgb(54, 176, 201)';
+
+    } else if (opcao == 3) {
+        document.getElementById('divOpcao3').style.backgroundColor = '#976bff';
         document.getElementById('divOpcao3').style.borderWidth = '3px';
-         
-    } else if (opcao == 4){
-        document.getElementById('divOpcao4').style.borderColor = 'rgb(54, 176, 201)';
+
+    } else if (opcao == 4) {
+        document.getElementById('divOpcao4').style.backgroundColor = '#976bff';
         document.getElementById('divOpcao4').style.borderWidth = '3px';
-        
+
     }
+
+    verificar();
+
 }
 
 function comecar() {
@@ -105,17 +226,7 @@ function comecar() {
 
 function atualizarPergunta() {
 
-    document.getElementById('divOpcao1').style.borderColor = 'rgb(214, 214, 214)';
-    document.getElementById('divOpcao1').style.borderWidth = '1px';
-
-    document.getElementById('divOpcao2').style.borderColor = 'rgb(214, 214, 214)';
-    document.getElementById('divOpcao2').style.borderWidth = '1px';
-
-    document.getElementById('divOpcao3').style.borderColor = 'rgb(214, 214, 214)';
-    document.getElementById('divOpcao3').style.borderWidth = '1px';
-
-    document.getElementById('divOpcao4').style.borderColor = 'rgb(214, 214, 214)';
-    document.getElementById('divOpcao4').style.borderWidth = '1px';
+    clicou(-1);
 
     questao++;
 
@@ -140,6 +251,7 @@ function atualizarPergunta() {
 
     opcaoSelecionada = [false, false, false, false];
 
+
 }
 
 function voltar() {
@@ -155,10 +267,8 @@ function verificar() {
     opcaoCorreta = Number(perguntaAtual.correta) - 1;
 
     if (opcoesSelecionadas[questao] == opcaoCorreta) {
-        console.log('Acertou');
         opcoesSelecionadas[questao] = true;
     } else {
-        console.log('Errou');
         opcoesSelecionadas[questao] = false;
     }
 
@@ -166,7 +276,7 @@ function verificar() {
 
 
 function finalizar() {
-    for (var i = 0; i <= opcoesSelecionadas.length - 1; i++) {
+    for (var i = 0; i < opcoesSelecionadas.length; i++) {
         if (opcoesSelecionadas[i] == true) {
             acertos++;
         }
@@ -186,7 +296,18 @@ function finalizar() {
 
     document.getElementById('divResultado').style.opacity = 1;
 
-    document.getElementById('valorGrafico').innerHTML = `${acertos / opcoesSelecionadas.length * 100}%`
+    if (acertos <= 4) {
+        document.getElementById('imgResultado').style.backgroundImage = "url('../img/bobTriste.png')"
+    } else if (acertos <= 7) {
+        document.getElementById('imgResultado').style.backgroundImage = "url('../img/bobMane.png')"
+    } else if (acertos <= 12) {
+        document.getElementById('imgResultado').style.backgroundImage = "url('../img/bobNerd.png')"
+    } else if (acertos <= 15) {
+        document.getElementById('imgResultado').style.backgroundImage = "url('../img/bobFeliz.png')"
+    }
+
+
+    document.getElementById('valorGrafico').innerHTML = `${Math.round(acertos / opcoesSelecionadas.length * 100)}%`
     document.getElementById('erradas').innerHTML = `❌ ${opcoesSelecionadas.length - acertos} respostas incorretas`
     document.getElementById('pontuacao').innerHTML = `📊 ${acertos} de ${opcoesSelecionadas.length} pontos`
 
@@ -200,10 +321,11 @@ function finalizar() {
                 label: 'Acertos',
                 data: [acertos, opcoesSelecionadas.length - acertos],
                 borderWidth: 1,
+                borderColor: '#7e279f',
                 backgroundColor: [
 
-                    'rgb(54, 162, 235)',
-                    'rgb(255, 89, 89)'
+                    '#e487e2',
+                    '#9f4f92'
 
                 ]
             }]
@@ -217,10 +339,48 @@ function finalizar() {
         }
 
     });
+    cadastrar();
 }
 
 function reiniciar() {
 
     window.location.reload();
+
+}
+
+
+function cadastrar() {
+
+    sessionStorage.PONTUACAO_USUARIO = acertos;
+    console.log("FORM ACERTOS: ", acertos);
+
+    fetch("/quiz/cadastrarResultado", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            pontuacaoServer: acertos,
+            idUsuarioServer: sessionStorage.ID_USUARIO
+        })
+    }).then(function (resposta) {
+        sessionStorage.ID_USUARIO = json.idUsuario;
+        if (resposta.ok) {
+            console.log(resposta);
+
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+                sessionStorage.ID_USUARIO = json.idUsuario;
+                sessionStorage.PONTUACAO_USUARIO = json.pontuacao;
+
+            });
+
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
 
 }

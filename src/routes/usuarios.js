@@ -12,4 +12,8 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
+router.post("/zerarPontucao", function (req, res) {
+    usuarioController.zerar(req, res);
+});
+
 module.exports = router;

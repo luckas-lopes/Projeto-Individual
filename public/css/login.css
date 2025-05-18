@@ -81,7 +81,6 @@ body {
 #conteudo {
     display: flex;
     align-items: center;
-    justify-content: center;
     background-image: url(../img/backgroundBob.png);
     background-size: cover;
     background-size: 100%;
@@ -91,10 +90,10 @@ body {
 #container {
     display: flex;
     align-items: center;
-    width: 160vh;
-    height: 80vh;
+    width: 80%;
     border-radius: 10px;
     padding-top: 60px;
+    margin-left: auto;
 }
 
 #card {
@@ -155,6 +154,7 @@ body {
     border-top-right-radius: 10px;
     z-index: 1;
     box-shadow: 1px 1px 4px rgb(66, 66, 66);
+    box-sizing: border-box;
 }
 
 #headerLogin {
