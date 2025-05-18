@@ -1,11 +1,3 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-
-/*
-comandos para mysql server
-*/
-
 create database projeto_individual;
 use projeto_individual;
 
@@ -16,4 +8,12 @@ create table usuario (
     senha varchar(45)
 );
 
-select * from usuario;
+create table pontuacaoQuiz (
+
+	idPontuacao int primary key auto_increment,
+    ultimaPontuacao int,
+    maiorPontuacao int,
+    fkUsuario int unique,
+    constraint fkPontuacaoUsuario foreign key (fkUsuario) references usuario(idUsuario)
+
+);
