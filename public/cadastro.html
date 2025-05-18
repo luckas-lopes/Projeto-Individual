@@ -77,7 +77,7 @@
                                 oninput="validarConfirmarSenhaCorreto()" id="iptConfirmarSenha">
                             <div id="legendaConfirmarSenha"></div>
                         </label>
-                        <button>Entrar</button>
+                        <button onclick="cadastrar()">Cadastrar</button>
                     </div>
                 </div>
 
@@ -95,3 +95,30 @@
 </body>
 
 </html>
+
+
+<script>
+
+    function cadastrar() {
+
+        var nome = iptNome.value;
+        var email = iptEmail.value;
+        var senha = iptSenha.value
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nome,
+                emailServer: email,
+                senhaServer: senha
+            }),
+        })
+    }
+
+</script>

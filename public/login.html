@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bolhas.css">
+    <link rel="stylesheet" href="./css/bolhas.css">
     <link rel="stylesheet" href="./css/login.css">
     <script src="./js/bolhas.js"></script>
     <title>Login</title>
@@ -15,7 +15,9 @@
         <!-- Nav -->
         <div id="nav">
             <div id="esquerda">
-                <a href="./index.html"><div id="logo"></div></a>
+                <a href="./index.html">
+                    <div id="logo"></div>
+                </a>
             </div>
             <div id="direita">
                 <li><a href="index.html">
@@ -59,17 +61,17 @@
                         </div>
                         <label>
                             <p>Email:</p>
-                            <input type="text">
+                            <input type="text" id="iptEmail">
                         </label>
                         <label>
                             <p>Senha:</p>
-                            <input type="text">
+                            <input type="text" id="iptSenha">
                         </label>
                         <div id="lembre">
                             <input type="checkbox">
                             Lembre de mim
                         </div>
-                        <button>Entrar</button>
+                        <button onclick="entrar()">Entrar</button>
                     </div>
                 </div>
 
@@ -96,3 +98,56 @@
 </body>
 
 </html>
+<script>
+
+    function redirecionarCadastro() {
+
+        window.location = 'cadastro.html';
+
+    }
+
+    function entrar() {
+
+        var email = iptEmail.value;
+        var senha = iptSenha.value;
+
+        console.log("FORM LOGIN: ", email);
+        console.log("FORM SENHA: ", senha);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: email,
+                senhaServer: senha
+            })
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./index.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+</script>

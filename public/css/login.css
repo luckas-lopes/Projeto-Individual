@@ -91,8 +91,8 @@ body {
 #container {
     display: flex;
     align-items: center;
-    width: 1200px;
-    height: 700px;
+    width: 160vh;
+    height: 80vh;
     border-radius: 10px;
     padding-top: 60px;
 }
@@ -103,7 +103,7 @@ body {
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    height: 700px;
+    height: 80vh;
     width: 600px;
     background-color: white;
     background-size: cover;
@@ -144,7 +144,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 645px;
+    height: 80vh;
     width: 600px;
     background-color: white;
     border-color: rgb(243, 243, 243);
@@ -153,7 +153,6 @@ body {
     border-bottom-style: solid;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    padding-bottom: 50px;
     z-index: 1;
     box-shadow: 1px 1px 4px rgb(66, 66, 66);
 }
@@ -220,7 +219,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 6vh;
-    font-size: 1.5vh;
+    font-size: 1.5vh;   
 }
 
 #footer p {
