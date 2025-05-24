@@ -104,16 +104,16 @@ function validarSenhaErrado() {
     }
 
     if (incorreta[0] != true) {
-        legendaSenha.innerHTML = 'Crie uma senha com pelo menos uma letra minúscula';
+        legendaSenha.innerHTML += 'Crie uma senha com pelo menos uma letra minúscula<br>';
     }
     if (incorreta[1] != true) {
-        legendaSenha.innerHTML = 'Crie uma senha com pelo menos uma letra maiúscula';
+        legendaSenha.innerHTML += 'Crie uma senha com pelo menos uma letra maiúscula<br>';
     }
     if (incorreta[2] != true) {
-        legendaSenha.innerHTML = 'Crie uma senha com pelo menos um caractere especial. ex(. , / $)';
+        legendaSenha.innerHTML += 'Crie uma senha com pelo menos um caractere especial. ex(. , / $)<br>';
     }
     if (incorreta[3] != true) {
-        legendaSenha.innerHTML = 'Crie uma senha com pelo menos 8 caracteres';
+        legendaSenha.innerHTML += 'Crie uma senha com pelo menos 8 caracteres<br>';
     }
 
 }
