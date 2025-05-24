@@ -154,6 +154,7 @@ const listaDePerguntas = [
 
 var questao = 0;
 var acertos = 0;
+var opcoesCorretas = [];
 var opcoesSelecionadas = [];
 var opcaoSelecionada = [false, false, false, false];
 
@@ -174,22 +175,24 @@ function clicou(opcao) {
     document.getElementById('divOpcao4').style.backgroundColor = '#7b44fa';
     document.getElementById('divOpcao4').style.borderWidth = '1px';
 
-
+    if (opcao != undefined) {
+        opcoesSelecionadas[questao] = opcao;
+    }
     opcaoSelecionada = [document.getElementById('iptOpt1').checked, document.getElementById('iptOpt2').checked, document.getElementById('iptOpt3').checked, document.getElementById('iptOpt4').checked]
-    opcoesSelecionadas[questao] = opcaoSelecionada.indexOf(true);
-    if (opcao == 1) {
+    opcoesCorretas[questao] = opcaoSelecionada.indexOf(true);
+    if (opcoesSelecionadas[questao] == 1) {
         document.getElementById('divOpcao1').style.backgroundColor = '#976bff';
         document.getElementById('divOpcao1').style.borderWidth = '3px';
 
-    } else if (opcao == 2) {
+    } else if (opcoesSelecionadas[questao] == 2) {
         document.getElementById('divOpcao2').style.backgroundColor = '#976bff';
         document.getElementById('divOpcao2').style.borderWidth = '3px';
 
-    } else if (opcao == 3) {
+    } else if (opcoesSelecionadas[questao] == 3) {
         document.getElementById('divOpcao3').style.backgroundColor = '#976bff';
         document.getElementById('divOpcao3').style.borderWidth = '3px';
 
-    } else if (opcao == 4) {
+    } else if (opcoesSelecionadas[questao] == 4) {
         document.getElementById('divOpcao4').style.backgroundColor = '#976bff';
         document.getElementById('divOpcao4').style.borderWidth = '3px';
 
@@ -225,10 +228,10 @@ function comecar() {
 }
 
 function atualizarPergunta() {
-    
+
     questao++;
-    
-    clicou(-1);
+
+    clicou();
 
     if (questao > 0) {
         document.getElementById('botaoVoltar').disabled = false;
@@ -257,7 +260,7 @@ function atualizarPergunta() {
 function voltar() {
 
     questao = questao - 2;
-    
+
     atualizarPergunta();
 
 }
@@ -267,18 +270,18 @@ function verificar() {
     var perguntaAtual = listaDePerguntas[questao];
     opcaoCorreta = Number(perguntaAtual.correta) - 1;
 
-    if (opcoesSelecionadas[questao] == opcaoCorreta) {
-        opcoesSelecionadas[questao] = true;
+    if (opcoesCorretas[questao] == opcaoCorreta) {
+        opcoesCorretas[questao] = true;
     } else {
-        opcoesSelecionadas[questao] = false;
+        opcoesCorretas[questao] = false;
     }
 
 }
 
 
 function finalizar() {
-    for (var i = 0; i < opcoesSelecionadas.length; i++) {
-        if (opcoesSelecionadas[i] == true) {
+    for (var i = 0; i < opcoesCorretas.length; i++) {
+        if (opcoesCorretas[i] == true) {
             acertos++;
         }
     }
@@ -308,9 +311,9 @@ function finalizar() {
     }
 
 
-    document.getElementById('valorGrafico').innerHTML = `${Math.round(acertos / opcoesSelecionadas.length * 100)}%`
-    document.getElementById('erradas').innerHTML = `❌ ${opcoesSelecionadas.length - acertos} respostas incorretas`
-    document.getElementById('pontuacao').innerHTML = `📊 ${acertos} de ${opcoesSelecionadas.length} pontos`
+    document.getElementById('valorGrafico').innerHTML = `${Math.round(acertos / opcoesCorretas.length * 100)}%`
+    document.getElementById('erradas').innerHTML = `❌ ${opcoesCorretas.length - acertos} respostas incorretas`
+    document.getElementById('pontuacao').innerHTML = `📊 ${acertos} de ${opcoesCorretas.length} pontos`
 
     var grafico = document.getElementById('grafico');
     new Chart(grafico, {
@@ -320,7 +323,7 @@ function finalizar() {
 
             datasets: [{
                 label: 'Acertos',
-                data: [acertos, opcoesSelecionadas.length - acertos],
+                data: [acertos, opcoesCorretas.length - acertos],
                 borderWidth: 1,
                 borderColor: '#7e279f',
                 backgroundColor: [
