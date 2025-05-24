@@ -152,6 +152,36 @@ const listaDePerguntas = [
 
 ];
 
+const opcoesFinalizar = [
+
+    {
+        frase: 'Poxa, boa sorte na próxima',
+        imagem: 'url("../img/bobTriste.png")',
+        acertosMaximo: 4
+    },
+
+    {
+        frase: 'Nada mau, mas pode melhorar',
+        imagem: 'url("../img/bobmane.png")',
+        acertosMaximo: 7
+    },
+
+    {
+        frase: 'Muito bem!',
+        imagem: "url('../img/bobNerd.png')",
+        acertosMaximo: 12
+    },
+
+    {
+        frase: 'Uau, você realmente sabe de Bob Esponja',
+        imagem: "url('../img/bobFeliz.png')",
+        acertosMaximo: 15
+    },
+
+
+
+]
+
 var questao = 0;
 var acertos = 0;
 var opcoesCorretas = [];
@@ -285,7 +315,6 @@ function verificar() {
 
 }
 
-
 function finalizar() {
     for (var i = 0; i < opcoesCorretas.length; i++) {
         if (opcoesCorretas[i] == true) {
@@ -307,16 +336,12 @@ function finalizar() {
 
     document.getElementById('divResultado').style.opacity = 1;
 
-    if (acertos <= 4) {
-        document.getElementById('imgResultado').style.backgroundImage = "url('../img/bobTriste.png')"
-    } else if (acertos <= 7) {
-        document.getElementById('imgResultado').style.backgroundImage = "url('../img/bobMane.png')"
-    } else if (acertos <= 12) {
-        document.getElementById('imgResultado').style.backgroundImage = "url('../img/bobNerd.png')"
-    } else if (acertos <= 15) {
-        document.getElementById('imgResultado').style.backgroundImage = "url('../img/bobFeliz.png')"
+    for (var i = 3; i >= 0; i--) {
+        if ((acertos <= opcoesFinalizar[i].acertosMaximo)){
+            document.getElementById('frase').innerHTML = `${opcoesFinalizar[i].frase}`;
+            document.getElementById('imgResultado').style.backgroundImage = `${opcoesFinalizar[i].imagem}`;
+        }
     }
-
 
     document.getElementById('valorGrafico').innerHTML = `${Math.round(acertos / opcoesCorretas.length * 100)}%`
     document.getElementById('erradas').innerHTML = `❌ ${opcoesCorretas.length - acertos} respostas incorretas`
@@ -358,7 +383,6 @@ function reiniciar() {
     window.location.reload();
 
 }
-
 
 function cadastrar() {
 
