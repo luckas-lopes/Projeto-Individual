@@ -241,7 +241,7 @@ function atualizarPergunta() {
 
     var perguntaAtual = listaDePerguntas[questao];
 
-    if (questao >= listaDePerguntas.length) {
+    if (questao == 15) {
         finalizar();
         return;
     }
@@ -266,14 +266,17 @@ function voltar() {
 }
 
 function verificar() {
+    
+    if (questao < 15) {
 
-    var perguntaAtual = listaDePerguntas[questao];
-    opcaoCorreta = Number(perguntaAtual.correta) - 1;
+        var perguntaAtual = listaDePerguntas[questao];
+        opcaoCorreta = Number(perguntaAtual.correta) - 1;
 
-    if (opcoesCorretas[questao] == opcaoCorreta) {
-        opcoesCorretas[questao] = true;
-    } else {
-        opcoesCorretas[questao] = false;
+        if (opcoesCorretas[questao] == opcaoCorreta) {
+            opcoesCorretas[questao] = true;
+        } else {
+            opcoesCorretas[questao] = false;
+        }
     }
 
 }
