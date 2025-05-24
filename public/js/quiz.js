@@ -225,10 +225,10 @@ function comecar() {
 }
 
 function atualizarPergunta() {
-
-    clicou(-1);
-
+    
     questao++;
+    
+    clicou(-1);
 
     if (questao > 0) {
         document.getElementById('botaoVoltar').disabled = false;
@@ -257,6 +257,7 @@ function atualizarPergunta() {
 function voltar() {
 
     questao = questao - 2;
+    
     atualizarPergunta();
 
 }
