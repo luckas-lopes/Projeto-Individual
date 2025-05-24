@@ -23,11 +23,11 @@ const listaDePerguntas = [
     {
         numQuestao: '3',
         pergunta: 'Quem é o dono do Siri Cascudo?',
-        opcao1: 'Sr. Siriguejo',
-        opcao2: 'Bob Esponja',
+        opcao1: 'Bob Esponja',
+        opcao2: 'Sr. Siriguejo',
         opcao3: 'Plankton',
         opcao4: 'Patrick',
-        correta: '1'
+        correta: '2'
     },
 
     {
@@ -177,9 +177,9 @@ function clicou(opcao) {
 
     if (opcao != undefined) {
         opcoesSelecionadas[questao] = opcao;
+        opcaoSelecionada = [document.getElementById('iptOpt1').checked, document.getElementById('iptOpt2').checked, document.getElementById('iptOpt3').checked, document.getElementById('iptOpt4').checked]
+        opcoesCorretas[questao] = opcaoSelecionada.indexOf(true);
     }
-    opcaoSelecionada = [document.getElementById('iptOpt1').checked, document.getElementById('iptOpt2').checked, document.getElementById('iptOpt3').checked, document.getElementById('iptOpt4').checked]
-    opcoesCorretas[questao] = opcaoSelecionada.indexOf(true);
     if (opcoesSelecionadas[questao] == 1) {
         document.getElementById('divOpcao1').style.backgroundColor = '#976bff';
         document.getElementById('divOpcao1').style.borderWidth = '3px';
@@ -208,7 +208,6 @@ function comecar() {
     document.getElementById('divOpcao2').style.cursor = 'pointer';
     document.getElementById('divOpcao3').style.cursor = 'pointer';
     document.getElementById('divOpcao4').style.cursor = 'pointer';
-    document.getElementById('botaoVoltar').style.cursor = 'pointer';
     document.getElementById('botaoEnviar').style.cursor = 'pointer';
 
     document.getElementById('divPergunta').innerHTML = listaDePerguntas[0].pergunta;
@@ -234,6 +233,11 @@ function atualizarPergunta() {
     clicou();
 
     if (questao > 0) {
+        if (questao == 14) {
+            document.getElementById('botaoEnviar').innerHTML = 'Enviar';
+        } else {
+            document.getElementById('botaoEnviar').innerHTML = 'Próximo';
+        }
         document.getElementById('botaoVoltar').disabled = false;
     } else {
         document.getElementById('botaoVoltar').disabled = true;
@@ -266,7 +270,7 @@ function voltar() {
 }
 
 function verificar() {
-    
+
     if (questao < 15) {
 
         var perguntaAtual = listaDePerguntas[questao];

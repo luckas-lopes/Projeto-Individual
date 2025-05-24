@@ -217,6 +217,7 @@ body {
 
 }
 
+
 #botaoVoltar {
     opacity: 0;
     padding: 10px;
@@ -225,6 +226,13 @@ body {
     width: 100px;
     border-style: none;
     color: white;
+    cursor: pointer;
+
+}
+
+#botaoVoltar:disabled {
+    cursor: default;
+    background-color: #6839d6;
 }
 
 #divOpcoes {
