@@ -78,6 +78,7 @@
                             <div id="legendaConfirmarSenha"></div>
                         </label>
                         <button onclick="cadastrar()">Cadastrar</button>
+                        <div id="legendaCadastro"></div>
                     </div>
                 </div>
 
@@ -119,19 +120,58 @@
                 senhaServer: senha
             }),
 
-            
+
         })
 
-        .then(function (resposta) {
-            console.log("resposta: ", resposta);
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                legendaCadastro.innerHTML = 'Cadastro realizado com sucesso!'
+                iptNome.disabled = true
+                iptEmail.disabled = true
+                iptSenha.disabled = true
+                iptConfirmarSenha.disabled = true
+
+                if (resposta.ok) {
+                    setTimeout(() => {
+                        window.location = "./login.html";
+                    }, "1000");
+                }
+            })
+
+        fetch("/usuarios/zerarPontucao", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idUsuarioServer: sessionStorage.ID_USUARIO
+            })
+        }).then(function (resposta) {
 
             if (resposta.ok) {
-                setTimeout(() => {
-                    window.location = "./login.html";
-                }, "1000");
+
+                iptEmail.disabled = true
+                iptSenha.disabled = true
+                legendaLogin.innerHTML = 'Login realizado com sucesso!'
+
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                });
+
+
+
             }
+
+        }).catch(function (erro) {
+            console.log(erro);
         })
-        
+
     }
 
 </script>

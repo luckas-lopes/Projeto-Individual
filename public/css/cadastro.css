@@ -220,6 +220,12 @@ body {
     color: red;
 }
 
+#legendaCadastro {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #00ff00;
+}
+
 #cadastro button {
     margin-top: 30px;
     border-style: none;

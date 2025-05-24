@@ -22,17 +22,9 @@ function cadastrar(nome, email, senha) {
     return database.executar(instrucaoSql);
 }
 
-function zerarPontuacaoQuiz(idUsuario) {
-    
-    var instrucaoSql = `INSERT INTO pontuacaoQuiz (maiorPontuacao, ultimaPontuacao, fkUsuario) VALUES (0, 0, ${idUsuario})`;
 
-
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
-}
 
 module.exports = {
     autenticar,
-    cadastrar,
-    zerarPontuacaoQuiz
+    cadastrar
 };

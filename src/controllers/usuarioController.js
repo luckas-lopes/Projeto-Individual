@@ -78,27 +78,27 @@ function cadastrar(req, res) {
     }
 }
 
-function zerar(req, res) {
+// function zerar(req, res) {
 
-    var idUsuario = req.body.idUsuarioServer;
+//     var idUsuario = req.body.idUsuarioServer;
 
-    // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-    usuarioModel.zerarPontuacaoQuiz(idUsuario)
-        .then(
-            function (resultado) {
-                res.json(resultado);
-            }
-        ).catch(
-            function (erro) {
-                console.log(erro);
-                console.log(
-                    "\nHouve um erro ao realizar o cadastro! Erro: ",
-                    erro.sqlMessage
-                );
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
+//     // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+//     usuarioModel.zerarPontuacaoQuiz(idUsuario)
+//         .then(
+//             function (resultado) {
+//                 res.json(resultado);
+//             }
+//         ).catch(
+//             function (erro) {
+//                 console.log(erro);
+//                 console.log(
+//                     "\nHouve um erro ao realizar o cadastro! Erro: ",
+//                     erro.sqlMessage
+//                 );
+//                 res.status(500).json(erro.sqlMessage);
+//             }
+//         );
+// }
 
 
 module.exports = {

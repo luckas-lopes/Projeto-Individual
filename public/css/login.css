@@ -183,15 +183,6 @@ body {
     font-size: 15px;
 }
 
-#lembre {
-    align-self: flex-start;
-    padding-left: 118px;
-    padding-top: 20px;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: end;
-}
-
 #login button {
     margin-top: 30px;
     border-style: none;
@@ -210,6 +201,13 @@ body {
 
 }
 
+#legendaLogin {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #00ff00;
+}
+
 
 /* Footer */
 #footer {
@@ -219,7 +217,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 6vh;
-    font-size: 1.5vh;   
+    font-size: 1.5vh;
 }
 
 #footer p {
