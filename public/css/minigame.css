@@ -322,6 +322,7 @@ body {
 }
 
 #botaoJogarNovamente {
+    display: none;
     margin-top: 10px;
     background-color: #ce511f;
     border-color: #ac2712;

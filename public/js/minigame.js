@@ -18,9 +18,9 @@ function comecar() {
     intervaloFinalizar = setTimeout(finalizar, segundos * 1000);
     intervaloContador = setInterval(contador, 1000);
 
+    document.getElementById('botaoComecar').style.display = 'none';
     document.getElementById('minigame').innerHTML = '';
     document.getElementById('contador').innerHTML += '<div id="divContador"></div>';
-    document.getElementById('botaoComecar').disabled = true;
 
     atualizar();
 
@@ -50,13 +50,13 @@ function atualizar() {
     if (imgAleatoria == 0) {
         img1 = '<img draggable="false" src="./img/bobOoO.png" width="90%">';
         img2 = '<img draggable="false" src="./img/patrickOoO.png" width="90%">';
-    } else if(imgAleatoria == 1) {
+    } else if (imgAleatoria == 1) {
         img1 = '<img draggable="false" src="./img/bobCaverna.png" width="100%">';
         img2 = '<img draggable="false" src="./img/patrickCaverna.png" width="100%">';
-    } else if(imgAleatoria == 2) {
+    } else if (imgAleatoria == 2) {
         img1 = '<img draggable="false" src="./img/bobPintura.jpeg" width="100%" height="100%">';
         img2 = '<img draggable="false" src="./img/patrickPintura.jpeg" width="100%" height="100%">';
-    } 
+    }
 
     // Cria os botões em sequência e quantidade aleatórias
     numBotoes = Math.round(Math.random() * 2);
@@ -132,7 +132,7 @@ function atualizar() {
                 opcao2++;
             }
         }
-        
+
         if ((opcao1 == 16) || (opcao2 == 16)) {
 
             atualizar();
@@ -179,7 +179,7 @@ function clicou(botao) {
     opcao1 = 0;
     opcao2 = 0;
 
-    
+
     if (numBotoes == 0) {
 
         // Troca a imagem do botão para sua contraparte
@@ -296,6 +296,7 @@ function finalizar() {
     }
 
     document.getElementById('divContador').remove();
+    document.getElementById('botaoJogarNovamente').style.display = 'block';
 
     clearInterval(intervaloContador)
 
