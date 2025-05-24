@@ -38,6 +38,7 @@ body {
 }
 
 #nav p {
+    width: 95px;
     font-size: 20px;
 }
 
@@ -47,7 +48,8 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    padding-right: 200px;
+    padding-right: 320px;
+    color: white;
 }
 
 #direita a{
