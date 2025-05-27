@@ -161,7 +161,7 @@ const opcoesFinalizar = [
     },
 
     {
-        frase: 'Nada mau, mas pode melhorar',
+        frase: 'Nada mal, mas pode melhorar',
         imagem: 'url("../img/bobmane.png")',
         acertosMaximo: 7
     },
