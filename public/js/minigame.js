@@ -6,6 +6,7 @@ var opcao1 = 0;
 var opcao2 = 0;
 var segundos = 15;
 var pontuacao = 0;
+var tempo = 0;
 
 var numBotoes;
 var intervaloContador;
@@ -307,7 +308,7 @@ function finalizar() {
 function mostrarPontuacao() {
 
     document.getElementById('minigame').innerHTML = `<p id="textoPontuacao">Pontuação: ${pontuacao}</p>`
-
+    cadastrar();
 
 }
 
@@ -315,7 +316,7 @@ function mostrarPontuacao() {
 function contador() {
 
     segundos--;
-
+    tempo++;
     atualizarContador();
 
     pontuacao += 25;
@@ -339,4 +340,27 @@ function atualizarContador() {
 
 function reiniciar() {
     window.location.reload();
+}
+
+function cadastrar() {
+
+    fetch("/minigame/cadastrarResultado", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            idUsuarioServer: sessionStorage.ID_USUARIO,
+            pontuacaoServer: pontuacao,
+            tempoServer: tempo
+        }),
+
+
+    })
+
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+        })
+
 }

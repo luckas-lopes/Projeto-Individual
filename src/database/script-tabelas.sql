@@ -8,12 +8,36 @@ create table usuario (
     senha varchar(45)
 );
 
-create table pontuacaoQuiz (
+create table quiz (
 
-	idPontuacao int primary key auto_increment,
-    ultimaPontuacao int,
-    maiorPontuacao int,
-    fkUsuario int unique,
-    constraint fkPontuacaoUsuario foreign key (fkUsuario) references usuario(idUsuario)
-
+	idQuiz int primary key auto_increment,
+    tipo varchar(45),
+    quantidadeQuestoes int    
+    
 );
+
+insert into quiz (tipo, quantidadeQuestoes) values
+	('Acertos', 15);
+
+create table tentativaQuiz (
+
+	idTentativa int auto_increment,
+    fkUsuario int,
+    fkQuiz int,
+    pontuacao int,
+    dataTentativa datetime default current_timestamp,
+    constraint fkUsuarioTentativa foreign key (fkUsuario) references usuario(idUsuario),
+    constraint fkQuizTentativa foreign key (fkQuiz) references quiz(idQuiz),
+	constraint pkComposta primary key (idTentativa, fkUsuario, fkQuiz)
+);
+
+create table tentativaMinigame (
+
+    idTentativaMinigame int auto_increment,
+    fkUsuario int,
+    pontuacao int,
+    tempoTentativa int,
+	constraint fkUsuarioTentativaMinigame foreign key (fkUsuario) references usuario(idUsuario),
+    constraint pkComposta primary key (idTentativaMinigame, fkUsuario)
+    
+); 

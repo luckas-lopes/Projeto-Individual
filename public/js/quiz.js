@@ -337,7 +337,7 @@ function finalizar() {
     document.getElementById('divResultado').style.opacity = 1;
 
     for (var i = 3; i >= 0; i--) {
-        if ((acertos <= opcoesFinalizar[i].acertosMaximo)){
+        if ((acertos <= opcoesFinalizar[i].acertosMaximo)) {
             document.getElementById('frase').innerHTML = `${opcoesFinalizar[i].frase}`;
             document.getElementById('imgResultado').style.backgroundImage = `${opcoesFinalizar[i].imagem}`;
         }
@@ -386,36 +386,50 @@ function reiniciar() {
 
 function cadastrar() {
 
-    sessionStorage.PONTUACAO_USUARIO = acertos;
-    console.log("FORM ACERTOS: ", acertos);
+    // fetch("/quiz/cadastrarResultado", {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type": "application/json"
+    //     },
+    //     body: JSON.stringify({
+    //         pontuacaoServer: acertos,
+    //         idUsuarioServer: sessionStorage.ID_USUARIO
+    //     })
+    // }).then(function (resposta) {
+    //     if (resposta.ok) {
+    //         console.log(resposta);
+
+    //         resposta.json().then(json => {
+    //             console.log(json);
+    //             console.log(JSON.stringify(json));
+    //             sessionStorage.PONTUACAO_USUARIO = json.pontuacao;
+
+    //         });
+
+    //     }
+
+    // }).catch(function (erro) {
+    //     console.log(erro);
+    // })
+
 
     fetch("/quiz/cadastrarResultado", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
         body: JSON.stringify({
             pontuacaoServer: acertos,
             idUsuarioServer: sessionStorage.ID_USUARIO
-        })
-    }).then(function (resposta) {
-        sessionStorage.ID_USUARIO = json.idUsuario;
-        if (resposta.ok) {
-            console.log(resposta);
+        }),
 
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-                sessionStorage.ID_USUARIO = json.idUsuario;
-                sessionStorage.PONTUACAO_USUARIO = json.pontuacao;
 
-            });
-
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
     })
 
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+            
+        })
 
 }

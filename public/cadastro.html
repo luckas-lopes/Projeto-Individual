@@ -139,39 +139,6 @@
                 }
             })
 
-        fetch("/usuarios/zerarPontucao", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                idUsuarioServer: sessionStorage.ID_USUARIO
-            })
-        }).then(function (resposta) {
-
-            if (resposta.ok) {
-
-                iptEmail.disabled = true
-                iptSenha.disabled = true
-                legendaLogin.innerHTML = 'Login realizado com sucesso!'
-
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-                    sessionStorage.ID_USUARIO = json.idUsuario;
-
-                });
-
-
-
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
     }
 
 </script>
