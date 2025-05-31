@@ -1,53 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: bob;
+    src: url(../font/KrabbyPatty.ttf);
+}
+
+@font-face {
+    font-family: bob2;
+    src: url(../font/freckle-face-regular.ttf);
+}
+
+.fonte1 {
+    font-family: bob;
+}
+
+.fonte2 {
+    font-family: bob2;
+}
+
 * {
     margin: 0;
 }
 
-#tela {
+#nav {
+    background: linear-gradient(56deg, rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
     width: 100%;
-    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px black;
+    z-index: 10;
+    height: 8%;
+}
+
+#nav li {
+    list-style: none;
+}
+
+#nav p {
+    font-size: 20px;
+}
+
+#direita {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-right: 200px;
+}
+
+#direita a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#direita a:hover {
+    color: rgb(201, 202, 202);
+}
+
+#esquerda {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 5vh;
+    height: 5vh;
+    background-image: url(../img/bob.jpg);
+    background-size: cover;
+    background-position: 64px;
+    border-radius: 30px;
+}
+
+
+
+#tela {
+    padding-top: 8vh;
+    width: 100%;
+    height: 90vh;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    background-color: #fafafa;
 }
 
 #kpis {
     width: 100%;
-    height: 48%;
+    height: 49%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.tituloTexto {
+    font-family: 'Poppins';
+    font-size: 2vh;
+    text-align: center;
+    margin-left: 2vh;
+    margin-top: 0.7vh;
+}
+
+.subtitulo {
+
+    font-family: 'Poppins';
+    font-size: 2vh;
+    margin-left: 2vh;
+    margin-top: 1vh;
+
 }
 
 #secaoQuiz {
 
     width: 48%;
     height: 98%;
-    background-color: aqua;
+    background-color: #fefeff;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
+    -moz-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
+}
+
+#taxaAcertos {
+    font-family: 'Poppins';
+    font-size: 7vh;
+    text-align: center;
+    margin-top: 1.5vh;
+}
+
+#vezesQuiz {
+    font-family: 'Poppins';
+    font-size: 7vh;
+    text-align: center;
+    margin-top: 1.5vh;
+}
+
+#melhorResultado {
+    font-family: 'Poppins';
+    font-size: 7vh;
+    text-align: center;
+    margin-top: 1.5vh;
 }
 
 #secaoMinigame {
 
     width: 48%;
     height: 98%;
-    background-color: aqua;
+    background-color: #fefeff;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
+    -moz-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
 
 
 }
 
+#partidasJogadas {
+    font-family: 'Poppins';
+    font-size: 7vh;
+    text-align: center;
+    margin-top: 1.5vh;
+}
+
 .titulo {
-    height: 10%;
+    height: 15%;
 }
 
 #cards {
     width: 98%;
-    height: 90%;
+    height: 85%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -59,56 +187,66 @@
     width: 48%;
     height: 48%;
     border-radius: 20px;
-    background-color: aquamarine;
-
+    background-color: #fefefe;
+    box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.05);
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.05);
+    -moz-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.05);
 }
 
 #graficos {
     width: 100%;
-    height: 44%;
+    height: 40%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
 }
 
 #divEvolucaoPessoal {
 
     width: 67%;
     height: 98%;
-    background-color: aqua;
+    background-color: #fefeff;
     border-radius: 20px;
+    box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
+    -moz-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
 
 
 }
 
 #divGrafico {
 
-    width: 98%;
-    height: 90%;
+    width: 100%;
+    height: 97%;
+
 
 }
 
 #grafico {
 
-    height: 98%;
+    height: 85%;
     width: 99%;
-    background-color: aquamarine;
+    background-color: #fefefe;
     border-radius: 20px;
-    margin-left: 2vh;
+    margin-left: 1vh;
 }
 
 #cardRanking {
 
     width: 30%;
-    height: 98%;
-    background-color: aqua;
+    height: 97%;
+    background-color: #fefeff;
     border-radius: 20px;
+    box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
+    -moz-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.15);
 
 }
 
 #divRanking {
 
-    height: 90%;
+    height: 85%;
     width: 100%;
 
 }
@@ -118,7 +256,7 @@
     width: 98%;
     height: 98%;
     border-radius: 20px;
-    background-color: aquamarine;
+    background-color: #fefefe;
     margin-left: 0.5vh;
 
 }

@@ -34,13 +34,13 @@ function entrar() {
 
             resposta.json().then(json => {
                 console.log(json);
-                console.log(JSON.stringify(json));
+                console.log('Json: ' + JSON.stringify(json));
                 sessionStorage.ID_USUARIO = json.idUsuario;
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
 
                 setTimeout(function () {
-                    window.location = "./sobreDesenho.html";
+                    // window.location = "./sobreDesenho.html";
                 }, 1000);
 
             });

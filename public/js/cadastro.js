@@ -139,3 +139,46 @@ function validarConfirmarSenhaErrado() {
         legendaConfirmarSenha.innerHTML = 'As senhas não conferem!';
     }
 }
+
+function cadastrar() {
+
+    var nome = iptNome.value;
+    var email = iptEmail.value;
+    var senha = iptSenha.value
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            nomeServer: nome,
+            emailServer: email,
+            senhaServer: senha
+        }),
+
+
+    })
+
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+            legendaCadastro.innerHTML = 'Cadastro realizado com sucesso!'
+            iptNome.disabled = true
+            iptEmail.disabled = true
+            iptSenha.disabled = true
+            iptConfirmarSenha.disabled = true
+            localStorage.setItem('Email', email)
+            localStorage.setItem('Senha', senha)
+
+            if (resposta.ok) {
+                setTimeout(() => {
+                    window.location = "./login.html";
+                }, "1000");
+            }
+        })
+
+}

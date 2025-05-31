@@ -5,36 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/dashboard.css">
+    <script src="./js/dashboard.js"></script>
     <title>Dashboard</title>
 </head>
 
 <body>
+
+    <!-- Nav -->
+    <div id="nav">
+        <div id="esquerda">
+            <a href="./index.html">
+                <div id="logo"></div>
+            </a>
+        </div>
+        <div id="direita">
+            <li>
+                <a href="./quiz.html">
+                    <p class="fonte1">Quiz</p>
+                </a>
+            </li>
+            <li>
+                <a href="./minigame.html">
+                    <p class="fonte1">Minigame</p>
+                </a>
+            </li>
+            <li>
+                <a href="./sobreDesenho.html">
+                    <p class="fonte1">Sobre</p>
+                </a>
+            </li>
+        </div>
+    </div>
 
     <div id="tela">
 
         <div id="kpis">
 
             <section id="secaoQuiz">
+
                 <div class="titulo">
-                    <h1>Desempenho no Quiz</h1>
+                    <h1 class="tituloTexto">Desempenho no Quiz</h1>
                 </div>
                 <div id="cards">
-                    <div class="kpi">Taxa de acertos</div>
-                    <div class="kpi">Tempo médio de quiz</div>
+
+                    <div class="kpi">
+                        <div class="subtitulo">
+                            📝Vezes que fez o Quiz
+                        </div>
+                        <h1 id="vezesQuiz">
+
+                        </h1>
+                    </div>
+
+                    <div class="kpi">
+                        <div class="subtitulo">
+                            🎯 Taxa de acertos
+                        </div>
+                        <h1 id="taxaAcertos">
+
+                        </h1>
+                    </div>
+
+                    <div class="kpi">
+                        <div class="subtitulo">
+                            ⭐ Melhor Resultado
+                        </div>
+                        <h1 id="melhorResultado">
+
+                        </h1>
+                    </div>
+
                     <div class="kpi">Pergunta que você mais acertou</div>
-                    <div class="kpi">Maior resultado</div>
                 </div>
             </section>
 
             <section id="secaoMinigame">
                 <div class="titulo">
-                    <h1>Desempenho no Minigame</h1>
+                    <h1 class="tituloTexto">Desempenho no Minigame</h1>
                 </div>
                 <div id="cards">
+
+                    <div class="kpi">
+                        <div class="subtitulo">
+                            🎮 Partidas Jogadas
+                        </div>
+                        <h1 id="partidasJogadas">
+
+                        </h1>
+                    </div>
+
                     <div class="kpi">Melhor Pontuação</div>
                     <div class="kpi">Pontuação Média</div>
                     <div class="kpi">Tempo Médio por Partida</div>
-                    <div class="kpi">Partidas Jogadas</div>
                 </div>
             </section>
 
@@ -44,7 +106,7 @@
 
             <div id="divEvolucaoPessoal">
                 <div class="titulo">
-                    <h1>Evolução Pessoal</h1>
+                    <h1 class="tituloTexto">Evolução Pessoal</h1>
                 </div>
                 <div id="divGrafico">
 
@@ -57,7 +119,7 @@
 
             <div id="cardRanking">
                 <div class="titulo">
-                    <h1>Top 5# no Minigame</h1>
+                    <h1 class="tituloTexto">Top 5# no Minigame</h1>
                 </div>
                 <div id="divRanking">
 
