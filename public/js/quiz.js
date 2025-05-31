@@ -185,6 +185,7 @@ const opcoesFinalizar = [
 
 var questao = 0;
 var acertos = 0;
+var taxaAcertos = 0;
 var opcoesCorretas = [];
 var opcoesSelecionadas = [];
 var opcaoSelecionada = [false, false, false, false];
@@ -344,7 +345,8 @@ function finalizar() {
         }
     }
 
-    document.getElementById('valorGrafico').innerHTML = `${Math.round(acertos / opcoesCorretas.length * 100)}%`
+    taxaAcertos = Math.round(acertos / opcoesCorretas.length * 100)
+    document.getElementById('valorGrafico').innerHTML = `${taxaAcertos}%`
     document.getElementById('erradas').innerHTML = `❌ ${opcoesCorretas.length - acertos} respostas incorretas`
     document.getElementById('pontuacao').innerHTML = `📊 ${acertos} de ${opcoesCorretas.length} pontos`
 
@@ -387,33 +389,6 @@ function reiniciar() {
 
 function cadastrar() {
 
-    // fetch("/quiz/cadastrarResultado", {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify({
-    //         pontuacaoServer: acertos,
-    //         idUsuarioServer: sessionStorage.ID_USUARIO
-    //     })
-    // }).then(function (resposta) {
-    //     if (resposta.ok) {
-    //         console.log(resposta);
-
-    //         resposta.json().then(json => {
-    //             console.log(json);
-    //             console.log(JSON.stringify(json));
-    //             sessionStorage.PONTUACAO_USUARIO = json.pontuacao;
-
-    //         });
-
-    //     }
-
-    // }).catch(function (erro) {
-    //     console.log(erro);
-    // })
-
-
     fetch("/quiz/cadastrarResultado", {
         method: "POST",
         headers: {
@@ -421,7 +396,8 @@ function cadastrar() {
         },
         body: JSON.stringify({
             pontuacaoServer: acertos,
-            idUsuarioServer: sessionStorage.ID_USUARIO
+            idUsuarioServer: sessionStorage.ID_USUARIO,
+            taxaAcertosServer: taxaAcertos
         }),
 
 

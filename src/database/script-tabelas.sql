@@ -25,6 +25,7 @@ create table tentativaQuiz (
     fkUsuario int,
     fkQuiz int,
     pontuacao int,
+	taxaAcertos int,
     dataTentativa datetime default current_timestamp,
     constraint fkUsuarioTentativa foreign key (fkUsuario) references usuario(idUsuario),
     constraint fkQuizTentativa foreign key (fkQuiz) references quiz(idQuiz),
