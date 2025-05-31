@@ -98,57 +98,58 @@ const listaDePerguntas = [
         opcao3: 'Gary',
         opcao4: 'Leo',
         correta: '3'
-    },
-
-    {
-        numQuestao: '11',
-        pergunta: 'Qual o prato principal do Siri Cascudo?',
-        opcao1: 'Batata frita',
-        opcao2: 'Pizza',
-        opcao3: 'Hambúrguer de siri',
-        opcao4: 'Cachorro-quente',
-        correta: '3'
-    },
-
-    {
-        numQuestao: '12',
-        pergunta: 'Quem é o vizinho ranzinza do Bob?',
-        opcao1: 'Patrick',
-        opcao2: 'Lula Molusco',
-        opcao3: 'Plankton',
-        opcao4: 'Sr. Siriguejo',
-        correta: '2'
-    },
-
-    {
-        numQuestao: '13',
-        pergunta: 'O que Sandy precisa usar para respirar no fundo do mar?',
-        opcao1: 'Óculos',
-        opcao2: 'Capacete de ar',
-        opcao3: 'Nadadeiras',
-        opcao4: 'Máscara de mergulho',
-        correta: '2'
-    },
-
-    {
-        numQuestao: '14',
-        pergunta: 'Qual é a ocupação do Bob Esponja?',
-        opcao1: 'Lavador de carros',
-        opcao2: 'Cozinheiro',
-        opcao3: 'Padeiro',
-        opcao4: 'Músico',
-        correta: '2'
-    },
-
-    {
-        numQuestao: '15',
-        pergunta: 'Qual é o lema do Sr. Siriguejo?',
-        opcao1: 'Viva a amizade',
-        opcao2: 'Trabalhe menos',
-        opcao3: 'Dinheiro em primeiro lugar',
-        opcao4: 'Comida grátis',
-        correta: '3'
     }
+    // ,
+
+    // {
+    //     numQuestao: '11',
+    //     pergunta: 'Qual o prato principal do Siri Cascudo?',
+    //     opcao1: 'Batata frita',
+    //     opcao2: 'Pizza',
+    //     opcao3: 'Hambúrguer de siri',
+    //     opcao4: 'Cachorro-quente',
+    //     correta: '3'
+    // },
+
+    // {
+    //     numQuestao: '12',
+    //     pergunta: 'Quem é o vizinho ranzinza do Bob?',
+    //     opcao1: 'Patrick',
+    //     opcao2: 'Lula Molusco',
+    //     opcao3: 'Plankton',
+    //     opcao4: 'Sr. Siriguejo',
+    //     correta: '2'
+    // },
+
+    // {
+    //     numQuestao: '13',
+    //     pergunta: 'O que Sandy precisa usar para respirar no fundo do mar?',
+    //     opcao1: 'Óculos',
+    //     opcao2: 'Capacete de ar',
+    //     opcao3: 'Nadadeiras',
+    //     opcao4: 'Máscara de mergulho',
+    //     correta: '2'
+    // },
+
+    // {
+    //     numQuestao: '14',
+    //     pergunta: 'Qual é a ocupação do Bob Esponja?',
+    //     opcao1: 'Lavador de carros',
+    //     opcao2: 'Cozinheiro',
+    //     opcao3: 'Padeiro',
+    //     opcao4: 'Músico',
+    //     correta: '2'
+    // },
+
+    // {
+    //     numQuestao: '15',
+    //     pergunta: 'Qual é o lema do Sr. Siriguejo?',
+    //     opcao1: 'Viva a amizade',
+    //     opcao2: 'Trabalhe menos',
+    //     opcao3: 'Dinheiro em primeiro lugar',
+    //     opcao4: 'Comida grátis',
+    //     correta: '3'
+    // }
 
 ];
 
@@ -157,25 +158,25 @@ const opcoesFinalizar = [
     {
         frase: 'Poxa, boa sorte na próxima',
         imagem: 'url("../img/bobTriste.png")',
-        acertosMaximo: 4
+        acertosMaximo: 2
     },
 
     {
         frase: 'Nada mal, mas pode melhorar',
         imagem: 'url("../img/bobmane.png")',
-        acertosMaximo: 7
+        acertosMaximo: 5
     },
 
     {
         frase: 'Muito bem!',
         imagem: "url('../img/bobNerd.png')",
-        acertosMaximo: 12
+        acertosMaximo: 7
     },
 
     {
         frase: 'Uau, você realmente sabe de Bob Esponja',
         imagem: "url('../img/bobFeliz.png')",
-        acertosMaximo: 15
+        acertosMaximo: 10
     },
 
 
@@ -275,7 +276,7 @@ function atualizarPergunta() {
 
     var perguntaAtual = listaDePerguntas[questao];
 
-    if (questao == 15) {
+    if (questao == listaDePerguntas.length) {
         finalizar();
         return;
     }
@@ -301,7 +302,7 @@ function voltar() {
 
 function verificar() {
 
-    if (questao < 15) {
+    if (questao < listaDePerguntas.length) {
 
         var perguntaAtual = listaDePerguntas[questao];
         opcaoCorreta = Number(perguntaAtual.correta) - 1;

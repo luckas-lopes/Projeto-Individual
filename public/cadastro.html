@@ -131,6 +131,8 @@
                 iptEmail.disabled = true
                 iptSenha.disabled = true
                 iptConfirmarSenha.disabled = true
+                localStorage.setItem('Email', email)
+                localStorage.setItem('Senha', senha)
 
                 if (resposta.ok) {
                     setTimeout(() => {

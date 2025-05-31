@@ -1,3 +1,9 @@
+function carregarEmailSenha() {
+    iptEmail.value = localStorage.Email
+    iptSenha.value = localStorage.Senha
+}
+
+
 function redirecionarCadastro() {
 
     window.location = './cadastro.html';
