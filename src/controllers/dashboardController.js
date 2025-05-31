@@ -204,6 +204,8 @@ function selecionarHistoricoQuiz(req, res) {
         );
 }
 
+
+
 function selecionarHistoricoMinigame(req, res) {
     var idUsuario = req.body.idUsuarioServer;
 
@@ -212,6 +214,28 @@ function selecionarHistoricoMinigame(req, res) {
     }
 
     dashboardModel.puxarHistoricoMinigame(idUsuario)
+        .then(
+            function (resultadoAutenticar) {
+                console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
+                console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+
+                res.status(200).json(resultadoAutenticar);
+
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+
+
+function selecionarTopCincoMinigame(req, res) {
+
+    dashboardModel.puxarTopCincoMinigame()
         .then(
             function (resultadoAutenticar) {
                 console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
@@ -240,4 +264,5 @@ module.exports = {
     selecionarMaiorTempoMinigame,
     selecionarHistoricoQuiz,
     selecionarHistoricoMinigame,
+    selecionarTopCincoMinigame,
 }

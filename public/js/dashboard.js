@@ -294,5 +294,50 @@ fetch("/dashboard/selecionarHistoricoMinigame", {
 
 
 
+fetch("/dashboard/selecionarTopCincoMinigame", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        idUsuarioServer: idUsuario
+    })
+}).then(function (resposta) {
+
+    if (resposta.ok) {
+        console.log('Resposta: ' + resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            if (json != '') {
+
+                for (var i = 0; i < json.length; i++) {
+
+                    document.getElementById(`rank${i + 1}`).innerHTML = `${i + 1}º`
+                    document.getElementById(`nomeRank${i + 1}`).innerHTML = `${json[i].nome}`
+                    document.getElementById(`pontuacaoRank${i + 1}`).innerHTML = `${json[i].pontuacaoMinigame}`
+                    document.getElementById(`tempoTentativaRank${i + 1}`).innerHTML = `${json[i].tempoTentativaMinigame}`
+
+                }
+
+            }
+
+
+
+        });
+
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+
+
+
+
+
 
 

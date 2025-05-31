@@ -72,6 +72,15 @@ function puxarHistoricoMinigame(idUsuario) {
 
 }
 
+function puxarTopCincoMinigame() {
+
+    var instrucaoSql = `SELECT nome, pontuacaoMinigame, tempoTentativaMinigame FROM usuario JOIN tentativaMinigame ON idUsuario = fkUsuario WHERE (fkUsuario, pontuacaoMinigame) IN (SELECT fkUsuario, MAX(pontuacaoMinigame) FROM tentativaMinigame GROUP BY fkUsuario) ORDER BY pontuacaoMinigame DESC LIMIT 5;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+
+}
+
 module.exports = {
     puxarTaxaAcertosQuiz,
     puxarVezesQuiz,
@@ -81,4 +90,5 @@ module.exports = {
     puxarMaiorTempoMinigame,
     puxarHistoricoQuiz,
     puxarHistoricoMinigame,
+    puxarTopCincoMinigame,
 };

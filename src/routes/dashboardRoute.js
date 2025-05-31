@@ -36,5 +36,9 @@ router.post("/selecionarHistoricoMinigame", function (req, res) {
     dashboardController.selecionarHistoricoMinigame(req, res);
 })
 
+router.post("/selecionarTopCincoMinigame", function (req, res) {
+    dashboardController.selecionarTopCincoMinigame(req, res);
+})
+
 
 module.exports = router;

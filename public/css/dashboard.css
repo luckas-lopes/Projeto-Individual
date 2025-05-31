@@ -99,7 +99,6 @@
 .tituloTexto {
     font-family: 'Poppins';
     font-size: 2vh;
-    text-align: center;
     margin-left: 2vh;
     margin-top: 0.7vh;
 }
@@ -185,6 +184,9 @@
 
 .titulo {
     height: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 #cards {
@@ -198,6 +200,7 @@
 
 .kpi {
 
+    color: #363636;
     width: 48%;
     height: 48%;
     border-radius: 20px;
@@ -288,6 +291,14 @@
 
 }
 
+.usuarioRank {
+
+    text-align: center;
+    font-size: 3vh;
+    font-family: 'Poppins';
+
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -318,6 +329,3 @@ th {
 
 
 
-tr:hover {
-    background-color: #f1f1f1;
-}
