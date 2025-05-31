@@ -13,20 +13,11 @@ function selecionarTaxaAcertosQuiz(req, res) {
                 console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
                 console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
 
-                if (resultadoAutenticar.length == 1) {
-                    console.log(resultadoAutenticar);
+                res.json({
+                    idUsuario: resultadoAutenticar[0].idUsuario,
+                    taxaAcertos: resultadoAutenticar[0]['round(avg(taxaAcertosQuiz))']
+                });
 
-                    res.json({
-                        idUsuario: resultadoAutenticar[0].idUsuario,
-                        taxaAcertos: resultadoAutenticar[0]['round(avg(taxaAcertos))']
-                    });
-
-
-                } else if (resultadoAutenticar.length == 0) {
-                    res.status(403).send("Email e/ou senha inválido(s)");
-                } else {
-                    res.status(403).send("Mais de um usuário com o mesmo login e senha!");
-                }
             }
         ).catch(
             function (erro) {
@@ -51,20 +42,11 @@ function selecionarVezesQuiz(req, res) {
                 console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
                 console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
 
-                if (resultadoAutenticar.length == 1) {
-                    console.log(resultadoAutenticar);
+                res.json({
+                    idUsuario: resultadoAutenticar[0].idUsuario,
+                    vezesQuiz: resultadoAutenticar[0]['count(idTentativaQuiz)']
+                });
 
-                    res.json({
-                        idUsuario: resultadoAutenticar[0].idUsuario,
-                        vezesQuiz: resultadoAutenticar[0]['count(idTentativa)']
-                    });
-
-
-                } else if (resultadoAutenticar.length == 0) {
-                    res.status(403).send("Email e/ou senha inválido(s)");
-                } else {
-                    res.status(403).send("Mais de um usuário com o mesmo login e senha!");
-                }
             }
         ).catch(
             function (erro) {
@@ -74,6 +56,8 @@ function selecionarVezesQuiz(req, res) {
             }
         );
 }
+
+
 
 function selecionarMelhorResultadoQuiz(req, res) {
     var idUsuario = req.body.idUsuarioServer;
@@ -88,20 +72,11 @@ function selecionarMelhorResultadoQuiz(req, res) {
                 console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
                 console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
 
-                if (resultadoAutenticar.length == 1) {
-                    console.log(resultadoAutenticar);
+                res.json({
+                    idUsuario: resultadoAutenticar[0].idUsuario,
+                    melhorResultado: resultadoAutenticar[0]['max(pontuacaoQuiz)']
+                });
 
-                    res.json({
-                        idUsuario: resultadoAutenticar[0].idUsuario,
-                        melhorResultado: resultadoAutenticar[0]['max(pontuacao)']
-                    });
-
-
-                } else if (resultadoAutenticar.length == 0) {
-                    res.status(403).send("Email e/ou senha inválido(s)");
-                } else {
-                    res.status(403).send("Mais de um usuário com o mesmo login e senha!");
-                }
             }
         ).catch(
             function (erro) {
@@ -127,20 +102,123 @@ function selecionarPartidasJogadasMinigame(req, res) {
                 console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
                 console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
 
-                if (resultadoAutenticar.length == 1) {
-                    console.log(resultadoAutenticar);
+                res.json({
+                    idUsuario: resultadoAutenticar[0].idUsuario,
+                    partidasJogadas: resultadoAutenticar[0]['count(idTentativaMinigame)']
+                });
 
-                    res.json({
-                        idUsuario: resultadoAutenticar[0].idUsuario,
-                        partidasJogadas: resultadoAutenticar[0]['count(idTentativaMinigame)']
-                    });
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
 
 
-                } else if (resultadoAutenticar.length == 0) {
-                    res.status(403).send("Email e/ou senha inválido(s)");
-                } else {
-                    res.status(403).send("Mais de um usuário com o mesmo login e senha!");
-                }
+
+function selecionarMelhorPontuacaoMinigame(req, res) {
+    var idUsuario = req.body.idUsuarioServer;
+
+    if (idUsuario == undefined) {
+        res.status(400).send("Você está deslogado!");
+    }
+
+    dashboardModel.puxarMelhorPontuacaoMinigame(idUsuario)
+        .then(
+            function (resultadoAutenticar) {
+                console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
+                console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em Strin
+
+                res.json({
+                    idUsuario: resultadoAutenticar[0].idUsuario,
+                    melhorPontuacao: resultadoAutenticar[0]['max(pontuacaoMinigame)']
+                });
+
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+
+
+function selecionarMaiorTempoMinigame(req, res) {
+    var idUsuario = req.body.idUsuarioServer;
+
+    if (idUsuario == undefined) {
+        res.status(400).send("Você está deslogado!");
+    }
+
+    dashboardModel.puxarMaiorTempoMinigame(idUsuario)
+        .then(
+            function (resultadoAutenticar) {
+                console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
+                console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+
+                res.json({
+                    idUsuario: resultadoAutenticar[0].idUsuario,
+                    maiorTempo: resultadoAutenticar[0]['max(tempoTentativaMinigame)']
+                });
+
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+
+
+function selecionarHistoricoQuiz(req, res) {
+    var idUsuario = req.body.idUsuarioServer;
+
+    if (idUsuario == undefined) {
+        res.status(400).send("Você está deslogado!");
+    }
+
+    dashboardModel.puxarHistoricoQuiz(idUsuario)
+        .then(
+            function (resultadoAutenticar) {
+                console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
+                console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+
+                res.status(200).json(resultadoAutenticar);
+
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+function selecionarHistoricoMinigame(req, res) {
+    var idUsuario = req.body.idUsuarioServer;
+
+    if (idUsuario == undefined) {
+        res.status(400).send("Você está deslogado!");
+    }
+
+    dashboardModel.puxarHistoricoMinigame(idUsuario)
+        .then(
+            function (resultadoAutenticar) {
+                console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
+                console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+
+                res.status(200).json(resultadoAutenticar);
+
             }
         ).catch(
             function (erro) {
@@ -158,5 +236,8 @@ module.exports = {
     selecionarVezesQuiz,
     selecionarMelhorResultadoQuiz,
     selecionarPartidasJogadasMinigame,
-
+    selecionarMelhorPontuacaoMinigame,
+    selecionarMaiorTempoMinigame,
+    selecionarHistoricoQuiz,
+    selecionarHistoricoMinigame,
 }

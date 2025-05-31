@@ -169,6 +169,20 @@
     margin-top: 1.5vh;
 }
 
+#melhorPontuacao {
+    font-family: 'Poppins';
+    font-size: 7vh;
+    text-align: center;
+    margin-top: 1.5vh;
+}
+
+#maiorTempo {
+    font-family: 'Poppins';
+    font-size: 7vh;
+    text-align: center;
+    margin-top: 1.5vh;
+}
+
 .titulo {
     height: 15%;
 }
@@ -219,15 +233,28 @@
 
     width: 100%;
     height: 97%;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
 }
 
-#grafico {
+#historicoQuiz {
 
     height: 85%;
-    width: 99%;
+    width: 48%;
     background-color: #fefefe;
+    /* background-color: greenyellow; */
+    border-radius: 20px;
+    margin-left: 1vh;
+}
+
+#historicoMinigame {
+
+    height: 85%;
+    width: 48%;
+    background-color: #fefefe;
+    /* background-color: greenyellow; */
     border-radius: 20px;
     margin-left: 1vh;
 }
@@ -259,4 +286,38 @@
     background-color: #fefefe;
     margin-left: 0.5vh;
 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    border-radius: 20px;
+    height: 98%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.05);
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.05);
+    -moz-box-shadow: 0px 0px 15px 8px rgba(138, 138, 138, 0.05);
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 2vh;
+
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+
+}
+
+
+
+tr:hover {
+    background-color: #f1f1f1;
 }

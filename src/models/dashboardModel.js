@@ -2,7 +2,7 @@ var database = require("../database/config")
 
 function puxarTaxaAcertosQuiz(idUsuario) {
 
-    var instrucaoSql = `select round(avg(taxaAcertos)) from tentativaQuiz where fkUsuario = ${idUsuario};`;
+    var instrucaoSql = `select round(avg(taxaAcertosQuiz)) from tentativaQuiz where fkUsuario = ${idUsuario};`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -11,7 +11,7 @@ function puxarTaxaAcertosQuiz(idUsuario) {
 
 function puxarVezesQuiz(idUsuario) {
 
-    var instrucaoSql = `select count(idTentativa) from tentativaQuiz where fkUsuario = ${idUsuario};`;
+    var instrucaoSql = `select count(idTentativaQuiz) from tentativaQuiz where fkUsuario = ${idUsuario};`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -20,7 +20,7 @@ function puxarVezesQuiz(idUsuario) {
 
 function puxarMelhorResultadoQuiz(idUsuario) {
 
-    var instrucaoSql = `select max(pontuacao) from tentativaQuiz where fkUsuario = ${idUsuario};`;
+    var instrucaoSql = `select max(pontuacaoQuiz) from tentativaQuiz where fkUsuario = ${idUsuario};`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -36,9 +36,49 @@ function puxarPartidasJogadasMinigame(idUsuario) {
 
 }
 
+function puxarMelhorPontuacaoMinigame(idUsuario) {
+
+    var instrucaoSql = `select max(pontuacaoMinigame) from tentativaMinigame where fkUsuario = ${idUsuario};`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+
+}
+
+function puxarMaiorTempoMinigame(idUsuario) {
+
+    var instrucaoSql = `select max(tempoTentativaMinigame) from tentativaMinigame where fkUsuario = ${idUsuario};`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+
+}
+
+function puxarHistoricoQuiz(idUsuario) {
+
+    var instrucaoSql = `select * from tentativaQuiz where fkUsuario = ${idUsuario} order by idtentativaQuiz desc limit 3;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+
+}
+
+function puxarHistoricoMinigame(idUsuario) {
+
+    var instrucaoSql = `select * from tentativaMinigame where fkUsuario = ${idUsuario} order by idtentativaMinigame desc limit 3;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+
+}
+
 module.exports = {
     puxarTaxaAcertosQuiz,
     puxarVezesQuiz,
     puxarMelhorResultadoQuiz,
-    puxarPartidasJogadasMinigame
+    puxarPartidasJogadasMinigame,
+    puxarMelhorPontuacaoMinigame,
+    puxarMaiorTempoMinigame,
+    puxarHistoricoQuiz,
+    puxarHistoricoMinigame,
 };

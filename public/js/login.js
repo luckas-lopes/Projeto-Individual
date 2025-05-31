@@ -40,7 +40,7 @@ function entrar() {
                 sessionStorage.NOME_USUARIO = json.nome;
 
                 setTimeout(function () {
-                    // window.location = "./sobreDesenho.html";
+                    window.location = "./sobreDesenho.html";
                 }, 1000);
 
             });
