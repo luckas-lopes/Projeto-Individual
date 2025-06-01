@@ -368,6 +368,9 @@ function mostrarPontuacao() {
 
                 if (json.maiorPontuacao != undefined) {
                     record = json.maiorPontuacao
+                    if (record < pontuacao) {
+                        record = pontuacao;
+                    }
                 } else {
                     record = pontuacao
                 }
