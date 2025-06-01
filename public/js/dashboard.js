@@ -367,4 +367,36 @@ fetch("/dashboard/selecionarMenorTempoQuiz", {
 
 
 
+fetch("/dashboard/selecionarPontuacaoMediaMinigame", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        idUsuarioServer: idUsuario
+    })
+}).then(function (resposta) {
+
+    if (resposta.ok) {
+        console.log('Resposta: ' + resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            if (json.pontuacaoMediaMinigame != undefined) {
+                pontuacaoMediaMinigame.innerHTML = json.pontuacaoMediaMinigame
+            } else {
+                pontuacaoMediaMinigame.innerHTML = '0'
+            }
+        });
+
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+
+
 

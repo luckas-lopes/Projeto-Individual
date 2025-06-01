@@ -307,8 +307,40 @@ function finalizar() {
 
 function mostrarPontuacao() {
 
-    document.getElementById('minigame').innerHTML = `<p id="textoPontuacao">Pontuação: ${pontuacao}</p>`
-    cadastrar();
+    var record = '';
+
+    fetch("/minigame/selecionarMaiorPontuacao", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idUsuarioServer: sessionStorage.ID_USUARIO
+        })
+    }).then(function (resposta) {
+
+        if (resposta.ok) {
+            console.log('Resposta: ' + resposta);
+
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+
+                if (json.maiorPontuacao != undefined) {
+                    record = json.maiorPontuacao
+                } else {
+                    record = pontuacao
+                }
+
+                document.getElementById('minigame').innerHTML += `<p id="textoPontuacao">Pontuação: ${pontuacao} <br><br> Record: ${record}</p>`
+                cadastrar();
+            });
+
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
 
 }
 

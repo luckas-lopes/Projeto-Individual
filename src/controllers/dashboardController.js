@@ -283,6 +283,34 @@ function selecionarMenorTempoQuiz(req, res) {
         );
 }
 
+function selecionarPontuacaoMediaMinigame(req, res) {
+    var idUsuario = req.body.idUsuarioServer;
+
+    if (idUsuario == undefined) {
+        res.status(400).send("Você está deslogado!");
+    }
+
+    dashboardModel.puxarPontuacaoMediaMinigame(idUsuario)
+        .then(
+            function (resultadoAutenticar) {
+                console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
+                console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+
+                res.json({
+                    idUsuario: resultadoAutenticar[0].idUsuario,
+                    pontuacaoMediaMinigame: resultadoAutenticar[0]['round(avg(pontuacaoMinigame))']
+                });
+
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 module.exports = {
     selecionarTaxaAcertosQuiz,
     selecionarVezesQuiz,
@@ -294,4 +322,5 @@ module.exports = {
     selecionarHistoricoMinigame,
     selecionarTopCincoMinigame,
     selecionarMenorTempoQuiz,
+    selecionarPontuacaoMediaMinigame,
 }

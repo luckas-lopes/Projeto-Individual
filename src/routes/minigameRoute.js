@@ -7,4 +7,8 @@ router.post("/cadastrarResultado", function (req, res) {
     minigameController.cadastrarResultado(req, res);
 })
 
+router.post("/selecionarMaiorPontuacao", function (req, res) {
+    minigameController.selecionarMaiorPontuacao(req, res);
+})
+
 module.exports = router;
