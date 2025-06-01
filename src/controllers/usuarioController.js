@@ -91,7 +91,7 @@ function selecionarNome(req, res) {
 
                     res.json({
                         idUsuario: resultadoAutenticar[0].idUsuario,
-                        nome: resultadoAutenticar[0].nome,
+                        nome: (((((resultadoAutenticar[0].nome).replaceAll(/[áàãâ]/g, 'a')).replaceAll(/[éèê]/g, 'e')).replaceAll(/[óòõô]/g, 'o')).replaceAll(/[úùû]/g, 'u')).replaceAll(/[íìî]/g, 'i'),
 
                     });
 
