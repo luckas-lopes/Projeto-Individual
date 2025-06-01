@@ -325,6 +325,21 @@
 
 }
 
+.rank1 {
+    background-color: #fef3e3;
+    color: #feac51;
+}
+
+.rank2 {
+    background-color: #e2e2e2;
+    color: #979797;
+}
+
+.rank3 {
+    background-color: #d0541623;
+    color: #f07527;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
