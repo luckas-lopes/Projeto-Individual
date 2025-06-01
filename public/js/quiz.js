@@ -1,3 +1,32 @@
+fetch("/usuarios/selecionarNome", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        idUsuarioServer: sessionStorage.ID_USUARIO
+    })
+}).then(function (resposta) {
+
+    if (resposta.ok) {
+        console.log('Resposta: ' + resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            campoNome.innerHTML = json.nome
+
+        });
+
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+
+
 const listaDePerguntas = [
 
     {

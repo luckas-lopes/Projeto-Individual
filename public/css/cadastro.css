@@ -65,8 +65,19 @@ body {
 #esquerda {
     width: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    margin-left: 1vh;
+}
+
+#logo {
+    width: 5vh;
+    height: 5vh;
+    background-image: url(../img/bob.jpg);
+    background-size: cover;
+    background-position: 64px;
+    border-radius: 30px;
+    margin-right: 1vh;
 }
 
 #logo {

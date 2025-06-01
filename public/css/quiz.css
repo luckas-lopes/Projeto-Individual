@@ -31,7 +31,7 @@ body {
     justify-content: space-between;
     box-shadow: 0px 0px 10px black;
     z-index: 10;
-    height: 8vh;
+    height: 8%;
 }
 
 #nav li {
@@ -48,8 +48,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    padding-right: 320px;
-    color: white;
+    padding-right: 200px;
 }
 
 #direita a {
@@ -64,8 +63,9 @@ body {
 #esquerda {
     width: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    margin-left: 1vh;
 }
 
 #logo {
@@ -75,8 +75,20 @@ body {
     background-size: cover;
     background-position: 64px;
     border-radius: 30px;
+    margin-right: 1vh;
 }
 
+#nomeUsuario {
+    font-family: 'Bob';
+    font-size: 2vh;
+    margin-top: 0.5vh;
+}
+
+#nomeUsuario a {
+    text-decoration: none;
+    color: white;
+
+}
 
 /* Conteúdo */
 #container {

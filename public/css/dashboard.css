@@ -62,8 +62,9 @@
 #esquerda {
     width: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    margin-left: 1vh;
 }
 
 #logo {
@@ -73,9 +74,20 @@
     background-size: cover;
     background-position: 64px;
     border-radius: 30px;
+    margin-right: 1vh;
 }
 
+#nomeUsuario {
+    font-family: 'Bob';
+    font-size: 2vh;
+    margin-top: 0.5vh;
+}
 
+#nomeUsuario a {
+    text-decoration: none;
+    color: white;
+
+}
 
 #tela {
     padding-top: 8vh;
@@ -340,6 +352,3 @@ th {
     color: #333;
 
 }
-
-
-
