@@ -39,155 +39,103 @@ const listaDePerguntas = [
 
     {
         numQuestao: '1',
-        pergunta: 'Qual é o nome do melhor amigo do Bob Esponja?',
-        opcao1: 'Lula Molusco',
-        opcao2: 'Sr. Siriguejo',
-        opcao3: 'Plankton',
-        opcao4: 'Patrick',
-        correta: '4'
+        pergunta: 'Qual é o nome completo do Sr. Siriguejo?',
+        opcao1: 'Eugene Harold Siriguejo',
+        opcao2: 'Edward Henry Siriguejo',
+        opcao3: 'Ernest Hugo Siriguejo',
+        opcao4: 'Eric Howard Siriguejo',
+        correta: '1'
     },
 
     {
         numQuestao: '2',
-        pergunta: 'Onde Bob Esponja trabalha?',
-        opcao1: 'Restaurante do Plankton',
-        opcao2: 'Pizzaria do Mar',
-        opcao3: 'Siri Cascudo',
-        opcao4: 'Lanchonete do Lula',
-        correta: '3'
+        pergunta: 'Qual é o nome do super-herói que Bob Esponja e Patrick adoram?',
+        opcao1: 'Molusco Mágico',
+        opcao2: 'Homem-Sereia',
+        opcao3: 'Mexilhão Cósmico',
+        opcao4: 'Homem-Raio',
+        correta: '2'
     },
 
     {
         numQuestao: '3',
-        pergunta: 'Quem é o dono do Siri Cascudo?',
-        opcao1: 'Bob Esponja',
-        opcao2: 'Sr. Siriguejo',
-        opcao3: 'Plankton',
-        opcao4: 'Patrick',
-        correta: '2'
+        pergunta: 'Qual é o nome do supercomputador que auxilia o Plankton?',
+        opcao1: 'Keren',
+        opcao2: 'Kairen',
+        opcao3: 'Karen',
+        opcao4: 'Karyn',
+        correta: '3'
     },
 
     {
         numQuestao: '4',
-        pergunta: 'Qual é o nome da esquila cientista?',
-        opcao1: 'Laura',
-        opcao2: 'Lisa',
-        opcao3: 'Sandy',
-        opcao4: 'Sheila',
-        correta: '3'
+        pergunta: 'Como se chama o restaurante rival do Siri Cascudo?',
+        opcao1: 'Balde de Siri',
+        opcao2: 'Balde de Lixo',
+        opcao3: 'Balde do Mar',
+        opcao4: 'Balde de Salmão',
+        correta: '2'
     },
 
     {
         numQuestao: '5',
-        pergunta: 'Quem tenta roubar a fórmula do hambúrguer de siri?',
-        opcao1: 'Patrick',
-        opcao2: 'Lula Molusco',
-        opcao3: 'Plankton',
-        opcao4: 'Larry',
-        correta: '3'
+        pergunta: 'Qual é o trabalho do Bob Esponja na Fenda do Bikini?',
+        opcao1: 'Gerente do Siri Cascudo',
+        opcao2: 'Cozinheiro no Siri Cascudo',
+        opcao3: 'Atendente do Siri Cascudo',
+        opcao4: 'Entregador do Siri Cascudo',
+        correta: '2'
     },
 
     {
         numQuestao: '6',
-        pergunta: 'Onde Bob Esponja mora?',
-        opcao1: 'Em um barril',
-        opcao2: 'Em um abacaxi',
-        opcao3: 'Em uma caverna',
-        opcao4: 'Em uma concha',
-        correta: '2'
+        pergunta: 'Qual é o nome da avó do Bob Esponja?',
+        opcao1: 'Vovó Esponja',
+        opcao2: 'Vovó Clara',
+        opcao3: 'Vovó Bolha',
+        opcao4: 'Vovó Fenda',
+        correta: '1'
     },
 
     {
         numQuestao: '7',
-        pergunta: 'Qual instrumento musical Lula Molusco toca?',
-        opcao1: 'Trompete',
-        opcao2: 'Violino',
-        opcao3: 'Flauta',
-        opcao4: 'Clarinete',
-        correta: '4'
-    },
-
-    {
-        numQuestao: '8',
-        pergunta: 'Qual é o nome da cidade onde vivem?',
-        opcao1: 'Mar Azul',
-        opcao2: 'Água Clara',
-        opcao3: 'Fenda do Biquíni',
-        opcao4: 'Recife Profundo',
-        correta: '3'
-    },
-
-    {
-        numQuestao: '9',
-        pergunta: 'Qual é o pet de estimação do Bob Esponja?',
-        opcao1: 'Um polvo',
-        opcao2: 'Um caracol',
-        opcao3: 'Um peixe',
-        opcao4: 'Um cavalo-marinho',
+        pergunta: 'O que Bob Esponja tentou aprender a fazer, mas nunca conseguiu?',
+        opcao1: 'Andar de bicicleta',
+        opcao2: 'Dirigir',
+        opcao3: 'Tocar clarinete',
+        opcao4: 'Fritar Habúrguer',
         correta: '2'
     },
 
     {
+        numQuestao: '8',
+        pergunta: 'Qual é o nome da lagosta fisiculturista que aparece na série?',
+        opcao1: 'Larry',
+        opcao2: 'Terry',
+        opcao3: 'Berry',
+        opcao4: 'Harry',
+        correta: '1'
+    },
+
+    {
+        numQuestao: '9',
+        pergunta: 'Como se chama o clube secreto do Bob e do Patrick?',
+        opcao1: 'Clube dos Moluscos',
+        opcao2: 'Clube dos Mexilhões',
+        opcao3: 'Clube dos Pescadores',
+        opcao4: 'Clube dos Feios',
+        correta: '4'
+    },
+
+    {
         numQuestao: '10',
-        pergunta: 'Qual é o nome do caracol de estimação do Bob?',
-        opcao1: 'Toby',
-        opcao2: 'Spike',
-        opcao3: 'Gary',
-        opcao4: 'Leo',
+        pergunta: 'O que o Plankton é, na verdade, em termos biológicos?',
+        opcao1: 'Bactéria',
+        opcao2: 'Molusco',
+        opcao3: 'Copépode',
+        opcao4: 'Crustáceo',
         correta: '3'
     }
-    // ,
-
-    // {
-    //     numQuestao: '11',
-    //     pergunta: 'Qual o prato principal do Siri Cascudo?',
-    //     opcao1: 'Batata frita',
-    //     opcao2: 'Pizza',
-    //     opcao3: 'Hambúrguer de siri',
-    //     opcao4: 'Cachorro-quente',
-    //     correta: '3'
-    // },
-
-    // {
-    //     numQuestao: '12',
-    //     pergunta: 'Quem é o vizinho ranzinza do Bob?',
-    //     opcao1: 'Patrick',
-    //     opcao2: 'Lula Molusco',
-    //     opcao3: 'Plankton',
-    //     opcao4: 'Sr. Siriguejo',
-    //     correta: '2'
-    // },
-
-    // {
-    //     numQuestao: '13',
-    //     pergunta: 'O que Sandy precisa usar para respirar no fundo do mar?',
-    //     opcao1: 'Óculos',
-    //     opcao2: 'Capacete de ar',
-    //     opcao3: 'Nadadeiras',
-    //     opcao4: 'Máscara de mergulho',
-    //     correta: '2'
-    // },
-
-    // {
-    //     numQuestao: '14',
-    //     pergunta: 'Qual é a ocupação do Bob Esponja?',
-    //     opcao1: 'Lavador de carros',
-    //     opcao2: 'Cozinheiro',
-    //     opcao3: 'Padeiro',
-    //     opcao4: 'Músico',
-    //     correta: '2'
-    // },
-
-    // {
-    //     numQuestao: '15',
-    //     pergunta: 'Qual é o lema do Sr. Siriguejo?',
-    //     opcao1: 'Viva a amizade',
-    //     opcao2: 'Trabalhe menos',
-    //     opcao3: 'Dinheiro em primeiro lugar',
-    //     opcao4: 'Comida grátis',
-    //     correta: '3'
-    // }
-
 ];
 
 const opcoesFinalizar = [
@@ -205,13 +153,13 @@ const opcoesFinalizar = [
     },
 
     {
-        frase: 'Muito bem!',
+        frase: 'Muito bem! Mas aina não o melhor',
         imagem: "url('../img/bobNerd.png')",
         acertosMaximo: 7
     },
 
     {
-        frase: 'Uau, você realmente sabe de Bob Esponja',
+        frase: 'Uau, você realmente sabe de Bob Esponja!',
         imagem: "url('../img/bobFeliz.png')",
         acertosMaximo: 10
     },
@@ -309,7 +257,7 @@ function atualizarPergunta() {
     clicou();
 
     if (questao > 0) {
-        if (questao == 14) {
+        if (questao == listaDePerguntas.length - 1) {
             document.getElementById('botaoEnviar').innerHTML = 'Enviar';
         } else {
             document.getElementById('botaoEnviar').innerHTML = 'Próximo';

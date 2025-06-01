@@ -181,8 +181,10 @@ body {
 
 #divPergunta {
 
+    text-align: center;
+    width: 100%;
     font-family: 'bob2';
-    font-size: 40px;
+    font-size: 3.5vh;
     color: #ffffff;
     text-shadow: black -2px 4px 1px;
     margin-top: 5%;
