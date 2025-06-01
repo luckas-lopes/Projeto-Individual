@@ -21,23 +21,25 @@ insert into quiz (tipo, quantidadeQuestoes) values
 
 create table tentativaQuiz (
 
-	idTentativa int auto_increment,
+	idTentativaQuiz int auto_increment,
     fkUsuario int,
     fkQuiz int,
-    pontuacao int,
-	taxaAcertos int,
-    dataTentativa datetime default current_timestamp,
+    pontuacaoQuiz int,
+	taxaAcertosQuiz int,
+    tempoTentativaQuiz int,
+    dataTentativaQuiz datetime default current_timestamp,
     constraint fkUsuarioTentativa foreign key (fkUsuario) references usuario(idUsuario),
     constraint fkQuizTentativa foreign key (fkQuiz) references quiz(idQuiz),
-	constraint pkComposta primary key (idTentativa, fkUsuario, fkQuiz)
+	constraint pkComposta primary key (idTentativaQuiz, fkUsuario, fkQuiz)
 );
 
 create table tentativaMinigame (
 
     idTentativaMinigame int auto_increment,
     fkUsuario int,
-    pontuacao int,
-    tempoTentativa int,
+    pontuacaoMinigame int,
+    tempoTentativaMinigame int,
+    dataTentativaMinigame datetime default current_timestamp,
 	constraint fkUsuarioTentativaMinigame foreign key (fkUsuario) references usuario(idUsuario),
     constraint pkComposta primary key (idTentativaMinigame, fkUsuario)
     

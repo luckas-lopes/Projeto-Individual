@@ -39,11 +39,17 @@ function entrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
 
+                legendaLogin.innerHTML = '<font color="00ff00">Login realizado com sucesso!'
+
                 setTimeout(function () {
                     window.location = "./sobreDesenho.html";
                 }, 1000);
 
             });
+
+        } else {
+
+            legendaLogin.innerHTML = '<font color="ff0000">Falha no login! Verifique suas credenciais!'
 
         }
 
