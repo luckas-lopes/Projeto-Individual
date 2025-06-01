@@ -152,7 +152,6 @@ fetch("/dashboard/selecionarMelhorPontuacaoMinigame", {
 
 
 
-
 fetch("/dashboard/selecionarMaiorTempoMinigame", {
     method: "POST",
     headers: {
@@ -207,26 +206,26 @@ fetch("/dashboard/selecionarHistoricoQuiz", {
                 if (json[0] != undefined) {
                     pontuacaoQuiz1.innerHTML = json[0].pontuacaoQuiz + '/10'
                     taxaAcertosQuiz1.innerHTML = json[0].taxaAcertosQuiz + '%'
-                    tempoTentativaQuiz1.innerHTML = json[0].tempoTentativaQuiz
+                    tempoTentativaQuiz1.innerHTML = json[0].tempoTentativaQuiz + 's'
                     dataTentativaQuiz1.innerHTML = (json[0].dataTentativaQuiz.slice(0, 19)).replace('T', '<br>')
                 } else {
                     pontuacaoQuiz1.innerHTML = json.pontuacaoQuiz + '/10'
                     taxaAcertosQuiz1.innerHTML = json.taxaAcertosQuiz + '%'
-                    tempoTentativaQuiz1.innerHTML = json.tempoTentativaQuiz
+                    tempoTentativaQuiz1.innerHTML = json.tempoTentativaQuiz + 's'
                     dataTentativaQuiz1.innerHTML = (json.dataTentativaQuiz.slice(0, 19)).replace('T', '<br>')
                 }
 
                 if (json[1] != undefined) {
                     pontuacaoQuiz2.innerHTML = json[1].pontuacaoQuiz + '/10'
                     taxaAcertosQuiz2.innerHTML = json[1].taxaAcertosQuiz + '%'
-                    tempoTentativaQuiz2.innerHTML = json[1].tempoTentativaQuiz
+                    tempoTentativaQuiz2.innerHTML = json[1].tempoTentativaQuiz + 's'
                     dataTentativaQuiz2.innerHTML = (json[1].dataTentativaQuiz.slice(0, 19)).replace('T', '<br>')
                 }
 
                 if (json[2] != undefined) {
                     pontuacaoQuiz3.innerHTML = json[2].pontuacaoQuiz + '/10'
                     taxaAcertosQuiz3.innerHTML = json[2].taxaAcertosQuiz + '%'
-                    tempoTentativaQuiz3.innerHTML = json[2].tempoTentativaQuiz
+                    tempoTentativaQuiz3.innerHTML = json[2].tempoTentativaQuiz + 's'
                     dataTentativaQuiz3.innerHTML = (json[2].dataTentativaQuiz.slice(0, 19)).replace('T', '<br>')
                 }
             }
@@ -318,7 +317,7 @@ fetch("/dashboard/selecionarTopCincoMinigame", {
                     document.getElementById(`rank${i + 1}`).innerHTML = `${i + 1}º`
                     document.getElementById(`nomeRank${i + 1}`).innerHTML = `${json[i].nome}`
                     document.getElementById(`pontuacaoRank${i + 1}`).innerHTML = `${json[i].pontuacaoMinigame}`
-                    document.getElementById(`tempoTentativaRank${i + 1}`).innerHTML = `${json[i].tempoTentativaMinigame}`
+                    document.getElementById(`tempoTentativaRank${i + 1}`).innerHTML = `${json[i].tempoTentativaMinigame}s`
 
                 }
 
@@ -336,7 +335,35 @@ fetch("/dashboard/selecionarTopCincoMinigame", {
 
 
 
+fetch("/dashboard/selecionarMenorTempoQuiz", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        idUsuarioServer: idUsuario
+    })
+}).then(function (resposta) {
 
+    if (resposta.ok) {
+        console.log('Resposta: ' + resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            if (json.menorTempoQuiz != undefined) {
+                menorTempoQuiz.innerHTML = json.menorTempoQuiz + 's'
+            } else {
+                menorTempoQuiz.innerHTML = '0s'
+            }
+        });
+
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
 
 
 

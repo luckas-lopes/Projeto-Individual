@@ -5,8 +5,9 @@ function cadastrarResultado(req, res) {
     var idUsuario = req.body.idUsuarioServer;
     var ultimaPontuacao = req.body.pontuacaoServer;
     var taxaAcertos = req.body.taxaAcertosServer;
+    var tempoTentativaQuiz = req.body.tempoTentativaQuizServer;
 
-    quizModel.salvarResultado(idUsuario, ultimaPontuacao, taxaAcertos)
+    quizModel.salvarResultado(idUsuario, ultimaPontuacao, taxaAcertos, tempoTentativaQuiz)
         .then(
             function (resultado) {
                 res.json(resultado);

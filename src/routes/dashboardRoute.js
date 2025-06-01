@@ -40,5 +40,9 @@ router.post("/selecionarTopCincoMinigame", function (req, res) {
     dashboardController.selecionarTopCincoMinigame(req, res);
 })
 
+router.post("/selecionarMenorTempoQuiz", function (req, res) {
+    dashboardController.selecionarMenorTempoQuiz(req, res);
+})
+
 
 module.exports = router;

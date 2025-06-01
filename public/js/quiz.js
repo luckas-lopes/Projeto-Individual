@@ -186,9 +186,12 @@ const opcoesFinalizar = [
 var questao = 0;
 var acertos = 0;
 var taxaAcertos = 0;
+var tempo = 0;
 var opcoesCorretas = [];
 var opcoesSelecionadas = [];
 var opcaoSelecionada = [false, false, false, false];
+
+var timer;
 
 function clicou(opcao) {
 
@@ -235,6 +238,10 @@ function clicou(opcao) {
 }
 
 function comecar() {
+
+    timer = setInterval(() => {
+        tempo++;
+    }, 1000);
 
     document.getElementById('divOpcao1').style.cursor = 'pointer';
     document.getElementById('divOpcao2').style.cursor = 'pointer';
@@ -324,6 +331,7 @@ function finalizar() {
         }
     }
 
+    clearInterval(timer);
     document.getElementById('divPergunta').remove();
     document.getElementById('cOpcao1').remove();
     document.getElementById('cOpcao2').remove();
@@ -397,7 +405,8 @@ function cadastrar() {
         body: JSON.stringify({
             pontuacaoServer: acertos,
             idUsuarioServer: sessionStorage.ID_USUARIO,
-            taxaAcertosServer: taxaAcertos
+            taxaAcertosServer: taxaAcertos,
+            tempoTentativaQuizServer: tempo
         }),
 
 
@@ -406,7 +415,7 @@ function cadastrar() {
         .then(function (resposta) {
             console.log("resposta: ", resposta);
 
-            
+
         })
 
 }

@@ -81,6 +81,15 @@ function puxarTopCincoMinigame() {
 
 }
 
+function puxarMenorTempoQuiz(idUsuario) {
+
+    var instrucaoSql = `select min(tempoTentativaQuiz) from tentativaQuiz where fkUsuario = ${idUsuario};`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+
+}
+
 module.exports = {
     puxarTaxaAcertosQuiz,
     puxarVezesQuiz,
@@ -91,4 +100,5 @@ module.exports = {
     puxarHistoricoQuiz,
     puxarHistoricoMinigame,
     puxarTopCincoMinigame,
+    puxarMenorTempoQuiz,
 };
