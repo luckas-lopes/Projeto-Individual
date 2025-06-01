@@ -25,7 +25,15 @@ fetch("/usuarios/selecionarNome", {
     console.log(erro);
 })
 
+function sair() {
 
+    sessionStorage.EMAIL_USUARIO = '';
+    sessionStorage.ID_USUARIO = '';
+    sessionStorage.NOME_USUARIO = '';
+    localStorage.Email = '';
+    localStorage.Senha = '';
+
+}
 
 const listaDePerguntas = [
 

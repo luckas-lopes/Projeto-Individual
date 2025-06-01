@@ -35,7 +35,7 @@
             </a>
         </li>
         <li>
-            <a href="./login.html">
+            <a onclick="sair()" href="./login.html">
                 <p class="fonte1">Sair</p>
             </a>
         </li>
@@ -126,6 +126,16 @@
 </body>
 
 <script>
+
+    function sair() {
+
+        sessionStorage.EMAIL_USUARIO = '';
+        sessionStorage.ID_USUARIO = '';
+        sessionStorage.NOME_USUARIO = '';
+        localStorage.Email = '';
+        localStorage.Senha = '';
+
+    }
 
     fetch("/usuarios/selecionarNome", {
         method: "POST",

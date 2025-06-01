@@ -1,5 +1,15 @@
 var idUsuario = sessionStorage.ID_USUARIO;
 
+function sair() {
+
+    sessionStorage.EMAIL_USUARIO = '';
+    sessionStorage.ID_USUARIO = '';
+    sessionStorage.NOME_USUARIO = '';
+    localStorage.Email = '';
+    localStorage.Senha = '';
+
+}
+
 fetch("/dashboard/selecionarVezesQuiz", {
     method: "POST",
     headers: {
