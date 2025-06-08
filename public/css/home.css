@@ -1,0 +1,128 @@
+@font-face {
+    font-family: bob;
+    src: url(../font/KrabbyPatty.ttf);
+ }
+
+ @font-face {
+    font-family: bob2;
+    src: url(../font/freckle-face-regular.ttf);
+ }
+
+body {
+    margin: 0;
+}
+
+
+.fonte1 {
+    font-family: bob;
+}
+
+.fonte2 {
+    font-family: bob2;
+}
+
+#nav {
+    background: linear-gradient(56deg, rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px black;
+    z-index: 10;
+    height: 8%;
+}
+
+#nav li {
+    list-style: none;
+}
+
+#nav p {
+    font-size: 20px;
+}
+
+#direita {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-right: 200px;
+}
+
+#direita a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#direita a:hover {
+    color: rgb(201, 202, 202);
+}
+
+#esquerda {
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 1vh;
+}
+
+#logo {
+    width: 5vh;
+    height: 5vh;
+    background-image: url(../img/bob.jpg);
+    background-size: cover;
+    background-position: 64px;
+    border-radius: 30px;
+    margin-right: 1vh;
+}
+
+#nomeUsuario {
+    font-family: 'Bob';
+    font-size: 2vh;
+    margin-top: 0.5vh;
+}
+
+#nomeUsuario a {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+/* Conteúdo */
+#container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../img/backgroundBob.png);
+    background-size: 100%;
+    height: 94vh;
+}
+
+#cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+
+    width: 40vh;
+    height: 30vh;
+    background-color: white;
+    border-radius: 2vh;
+
+}
+
+
+
+/* Footer */
+#footer {
+    background-image: url(../img/backgroundAreia.png);
+    background-size: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    font-size: 1.5vh;
+}

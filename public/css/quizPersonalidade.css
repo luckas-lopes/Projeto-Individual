@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: bob;
+    src: url(../font/KrabbyPatty.ttf);
+}
+
+@font-face {
+    font-family: bob2;
+    src: url(../font/freckle-face-regular.ttf);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.fonte1 {
+    font-family: bob;
+}
+
+.fonte2 {
+    font-family: bob2;
+}
+
+#nav {
+    background: linear-gradient(56deg, rgb(54, 176, 201) 0%, rgba(87, 139, 217, 1) 100%, rgba(47, 39, 204, 1) 100%);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px black;
+    z-index: 10;
+    height: 8%;
+}
+
+#nav li {
+    list-style: none;
+}
+
+#nav p {
+    font-size: 20px;
+}
+
+#direita {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-right: 200px;
+}
+
+#direita a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#direita a:hover {
+    color: rgb(201, 202, 202);
+}
+
+#esquerda {
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 1vh;
+}
+
+#logo {
+    width: 5vh;
+    height: 5vh;
+    /* background-image: url(../img/sandy.png); */
+    background-size: cover;
+    /* background-position: 64px; */
+    border-radius: 30px;
+    margin-right: 1vh;
+}
+
+#nomeUsuario {
+    font-family: 'Bob';
+    font-size: 2vh;
+    margin-top: 0.5vh;
+}
+
+#nomeUsuario a {
+    text-decoration: none;
+    color: white;
+
+}
+
+/* Conteúdo */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/backgroundBob.png);
+    background-size: 100%;
+    height: 94vh;
+}
+
+#quiz {
+    margin-top: 75px;
+    position: relative;
+    background-image: url(../img/);
+    background-size: cover;
+    font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: white;
+    background-image: url('../img/backgroundAzulEscuro.jpg');
+    width: 100vh;
+    height: 70vh;
+    border-radius: 15px;
+    border: 2px, #07226a, solid;
+    z-index: 1;
+}
+
+#questaoNum {
+
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3%;
+    height: 5%;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    font-size: 1.5vh;
+    border-color: black;
+    position: absolute;
+    bottom: 92.5%;
+    background-color: #1d5190;
+    z-index: 1;
+
+}
+
+#linha {
+
+    position: absolute;
+    width: 100%;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    opacity: 0;
+    bottom: 95%;
+
+}
+
+#comecar {
+    position: absolute;
+    margin-right: 0px;
+}
+
+#comecar button {
+
+    border: 2px, #07226a, solid;
+    background-color: #1d5190;
+    text-shadow: 2px 2px #07226a;
+    color: white;
+    font-size: 50px;
+    border-radius: 15px;
+    width: 300px;
+    cursor: pointer;
+    z-index: 100;
+
+
+}
+
+
+
+#comecar button:hover {
+
+    background: #2f67b9;
+
+}
+
+#divPergunta {
+
+    text-align: center;
+    width: 100%;
+    font-family: 'bob2';
+    font-size: 3.5vh;
+    color: #ffffff;
+    text-shadow: black -2px 4px 1px;
+    margin-top: 5%;
+
+
+}
+
+#divOpcoes {
+
+    display: flex;
+    margin-top: 5%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 700px;
+    height: 300px;
+
+}
+
+#divOpcoes .divOpcao {
+    font-family: 'Poppins';
+    color: white;
+    border-width: 1px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 325px;
+    height: 100px;
+    position: relative;
+    font-size: 20px;
+    margin-top: 12px;
+    border: 2px, #07226a, solid;
+    background-color: #1d5190;
+    box-sizing: border-box;
+
+}
+
+#botaoEnviar {
+    opacity: 0;
+    padding: 10px;
+    background-color: #1d5190;
+    border-radius: 10px;
+    width: 100px;
+    border-style: none;
+    color: white;
+
+}
+
+
+#botaoVoltar {
+    opacity: 0;
+    padding: 10px;
+    background-color: #1d5190;
+    border-radius: 10px;
+    width: 100px;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+
+}
+
+#botaoVoltar:disabled {
+    cursor: default;
+    background-color: #2f67b9;
+}
+
+#divOpcoes {
+    opacity: 0;
+    z-index: -1;
+}
+
+#divOpcoes input[type='radio'] {
+
+    appearance: none;
+
+}
+
+#divResultado {
+    margin-top: 5%;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'bob';
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    z-index: -2;
+    height: 80%;
+
+}
+
+#divResultado #palavra {
+
+    margin-top: -5%;
+    font-size: 50px;
+    height: 50px;
+
+}
+
+#linhaResultado {
+    position: absolute;
+    z-index: 100;
+
+}
+
+#resultados {
+    display: flex;
+    flex-wrap: wrap;
+    width: 850px;
+    height: 300px;
+    flex-direction: column;
+
+}
+
+#divGrafico {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin-left: 25vh;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+}
+
+#divGrafico p {
+    font-size: 30px;
+    width: 500px;
+    height: 30px;
+}
+
+#valorGrafico {
+
+    position: absolute;
+    margin-top: 120px;
+    font-size: 40px;
+    color: white;
+
+}
+
+#grafico {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+#divLegendaResultados {
+
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-top: 20vh;
+    margin-left: -48vh;
+
+}
+
+#divLegendaResultados #frase {
+
+    font-size: 30px;
+    font-family: 'bob2';
+
+}
+
+#divLegendaResultados p {
+
+    font-size: 15px;
+
+}
+
+
+#imgResultado {
+
+    width: 25vh;
+    height: 25vh;
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px, #07226a, solid;
+    margin-left: 3vh;
+    box-sizing: border-box;
+
+}
+
+#divJogarNovamente {
+
+    position: absolute;
+    margin-top: 48vh;
+    margin-left: 432.5px;
+
+
+}
+
+#botaoJogarNovamente {
+
+    padding: 10px;
+    background-color: #1d5190;
+    border-radius: 10px;
+    width: 150px;
+    border-style: none;
+    color: white;
+    margin-top: 5vh;
+    margin-left: -8vh;
+    cursor: pointer;
+}
+
+/* Footer */
+#footer {
+    background-image: url(../img/backgroundAreia.png);
+    background-size: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+}

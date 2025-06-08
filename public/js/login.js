@@ -39,6 +39,9 @@ function entrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
 
+                iptEmail.disabled = true;
+                iptSenha.disabled = true;
+
                 legendaLogin.innerHTML = '<font color="00ff00">Login realizado com sucesso!'
 
                 setTimeout(function () {

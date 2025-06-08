@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+}
+
+#tela {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+
+}
+
+
+
+#dashboardQuiz {
+    display: flex;
+    /* align-items: flex-end; */
+    flex-wrap: wrap;
+    width: 49%;
+    height: 100vh;
+    background-color: red;
+    position: relative;
+
+}
+
+#dashboardMinigame {
+    display: flex;
+    /* align-items: flex-end; */
+    flex-wrap: wrap;
+    width: 49%;
+    height: 100vh;
+    background-color: blue;
+    position: relative;
+
+}
+
+#containerKpi {
+
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.kpiQuiz {
+
+    height: 20vh;
+    width: 32%;
+    background-color: aqua;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;
+
+}
+
+.kpiMinigame {
+
+    height: 27vh;
+    width: 48%;
+    margin-top: 2%;
+    background-color: aqua;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;
+
+}
+
+#containerGraficos {
+
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 39vh;
+}
+
+#grafico1 {
+
+    width: 48%;
+    height: 98%;
+    background-color: aqua;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 1%;
+
+}
+
+#grafico2 {
+
+    width: 48%;
+    height: 98%;
+    background-color: aqua;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 1%;
+
+}
+
+/* #grafico3 {
+
+    width: 90%;
+    height: 46%;
+    background-color: aqua;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 1%;
+
+} */

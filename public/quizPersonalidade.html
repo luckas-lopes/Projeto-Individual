@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bolhas.css">
-    <link rel="stylesheet" href="./css/quiz.css">
+    <link rel="stylesheet" href="./css/quizPersonalidade.css">
     <script src="./js/bolhas.js"></script>
-    <script src="./js/quiz.js"></script>
+    <script src="./js/quizPersonalidade.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Quiz</title>
+    <title>Quiz Personalidade</title>
 </head>
 
 <!-- Nav -->
@@ -21,11 +21,6 @@
         <div id="nomeUsuario"><a href="./dashboard.html" id="campoNome"></a></div>
     </div>
     <div id="direita">
-        <li>
-            <a href="./home.html">
-                <p class="fonte1">Inicio</p>
-            </a>
-        </li>
         <li>
             <a href="./quiz.html">
                 <p class="fonte1">Quiz</p>
@@ -97,21 +92,18 @@
                 </div>
                 <div id="divBotao">
                     <button id="botaoVoltar" disabled onclick="voltar()">Voltar</button>
-                    <button id="botaoEnviar" onclick="atualizarPergunta(), verificar()" disabled>Próximo</button>
+                    <button id="botaoEnviar" onclick="atualizarPergunta()" disabled>Próximo</button>
                 </div>
 
                 <div id="divResultado">
                     <p id="palavra">Resultados</p>
                     <div id="resultados">
                         <div id="divGrafico">
-                            <p>Porcentagem de Acertos</p>
+                            <p id="frasePersonagem">Sua personalidade combina com o...</p>
+                            <p id="personagem"></p>
                             <br>
-                            <p id="valorGrafico">Num</p><canvas id="grafico"></canvas>
                         </div>
                         <div id="divLegendaResultados">
-                            <p id="frase">Frase Bonitinha</p>
-                            <p id="erradas"></p>
-                            <p id="pontuacao"></p>
                             <div id="imgResultado"></div>
                         </div>
                     </div>
