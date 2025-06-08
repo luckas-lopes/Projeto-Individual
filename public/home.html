@@ -55,51 +55,56 @@
     <!-- Conteúdo  -->
     <div id="container">
         <section>
+            <div id="tela">
 
-            <div id="cards">
-
-                <div class="card">
-                    <p class="titulo">
-                        Quiz de Conhecimento
-                    </p>
-                    <p class="descricao">
-                        Teste seus conhecimentos de Bob Esponja, quem sabe você seja um fã assíduo
-                    </p>
-                    <button class="botao" onclick="window.location = './quiz.html'">Seguir</button>
+                <div id="bemVindo">
+                    <h1 id="nome"></h1>
                 </div>
 
-                <div class="card">
-                    <p class="titulo">
-                        Minigame
-                    </p>
-                    <p class="descricao">
-                        Jogue um minigame divertido e tente ficar no Top#1 entre todos os outros usuários
-                    </p>
-                    <button class="botao" onclick="window.location = './minigame.html'">Seguir</button>
-                </div>
+                <div id="cards">
 
-                <div class="card">
-                    <p class="titulo">
-                        Sobre o Desenho
-                    </p>
-                    <p class="descricao">
-                        Venha conhecer brevemente a história do desenho que inspirou este site!
-                    </p>
-                    <button class="botao" onclick="window.location = './sobreDesenho.html'">Seguir</button>
-                </div>
+                    <div class="card">
+                        <p class="titulo">
+                            Quiz de Conhecimento
+                        </p>
+                        <p class="descricao">
+                            Teste seus conhecimentos de Bob Esponja, quem sabe você seja um fã assíduo
+                        </p>
+                        <button class="botao" onclick="window.location = './quiz.html'">Seguir</button>
+                    </div>
 
-                <div class="card">
-                    <p class="titulo">
-                        Dashboard
-                    </p>
-                    <p class="descricao">
-                        Aqui você poderá ver todas suas estatísticas e sua posição no placar do minigame
-                    </p>
-                    <button class="botao" onclick="window.location = './dashboard.html'">Seguir</button>
-                </div>
+                    <div class="card">
+                        <p class="titulo">
+                            Minigame
+                        </p>
+                        <p class="descricao">
+                            Jogue um minigame divertido e tente ficar no Top#1 entre todos os outros usuários
+                        </p>
+                        <button class="botao" onclick="window.location = './minigame.html'">Seguir</button>
+                    </div>
 
+                    <div class="card">
+                        <p class="titulo">
+                            Sobre o Desenho
+                        </p>
+                        <p class="descricao">
+                            Venha conhecer brevemente a história do desenho que inspirou este site!
+                        </p>
+                        <button class="botao" onclick="window.location = './sobreDesenho.html'">Seguir</button>
+                    </div>
+
+                    <div class="card">
+                        <p class="titulo">
+                            Dashboard
+                        </p>
+                        <p class="descricao">
+                            Aqui você poderá ver todas suas estatísticas e sua posição no placar do minigame
+                        </p>
+                        <button class="botao" onclick="window.location = './dashboard.html'">Seguir</button>
+                    </div>
+
+                </div>
             </div>
-
 
         </section>
     </div>
@@ -132,6 +137,7 @@
                 console.log(JSON.stringify(json));
 
                 campoNome.innerHTML = json.nome
+                nome.innerHTML = `Seja bem vindo, ${json.nome}!`
 
             });
 
