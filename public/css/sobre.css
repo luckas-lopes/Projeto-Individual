@@ -42,7 +42,6 @@ body {
 #direita {
     width: 200px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 30px;
     padding-right: 200px;
@@ -51,6 +50,7 @@ body {
 #direita a {
     text-decoration: none;
     color: rgb(255, 255, 255);
+    
 }
 
 #direita a:hover {
@@ -75,16 +75,6 @@ body {
     margin-right: 1vh;
 }
 
-#logo {
-    width: 5vh;
-    height: 5vh;
-    background-image: url(../img/bob.jpg);
-    background-size: cover;
-    background-position: 64px;
-    border-radius: 30px;
-}
-
-
 /* Conteúdo */
 #container {
     display: flex;
@@ -93,142 +83,6 @@ body {
     background-image: url(../img/backgroundBob.png);
     background-size: 100%;
     height: 174vh;
-}
-
-
-#conteudo {
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    width: 1200px;
-    height: 1400px;
-    border-radius: 15px;
-    border-color: rgb(191, 200, 207);
-    border-width: 2px;
-    border-style: solid;
-    z-index: 1;
-}
-
-#criador {
-    display: flex;
-    flex-direction: row;
-    height: 400px;
-    width: 100%;
-    position: absolute;
-    font-family: 'Poppins', sans-serif;
-}
-
-#imgCriador {
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-image: url(../img/stephen.jpg);
-    background-size: cover;
-    height: 400px;
-    width: 600px;
-    position: relative;
-
-}
-
-#textoCriador {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    justify-self: flex-start;
-    float: right;
-    width: 600px;
-    height: 400px;
-    position: relative;
-}
-
-#textoCriador h1 {
-    text-align: center;
-}
-
-#textoCriador p {
-    padding: 30px;
-}
-
-#desenho {
-    display: flex;
-    flex-direction: row;
-    height: 400px;
-    width: 100%;
-    position: absolute;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 500px;
-}
-
-#textoDesenho {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    float: left;
-    width: 600px;
-    height: 400px;
-    position: relative;
-}
-
-#textoDesenho h1 {
-    text-align: center;
-}
-
-#textoDesenho p {
-    padding: 30px;
-}
-
-#imgDesenho {
-    background-color: aqua;
-    background-image: url(../img/bobturma.png);
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    background-size: 600px;
-    background-position-y: -29px;
-    height: 400px;
-    width: 600px;
-    position: relative;
-}
-
-#filme {
-    display: flex;
-    flex-direction: row;
-    height: 400px;
-    width: 100%;
-    position: absolute;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 1000px;
-}
-
-#imgFilme {
-    background-image: url(../img/bobfilme.webp);
-    width: 630px;
-    background-size: 709px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    background-position-x: -40px;
-    position: relative;
-}
-
-#textoFilme {
-    display: flex;
-    float: right;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    float: left;
-    width: 550px;
-    height: 400px;
-    position: relative;
-}
-
-#textoFilme h1 {
-    text-align: center;
-}
-
-#textoFilme p {
-    padding: 30px;
 }
 
 /* Footer */

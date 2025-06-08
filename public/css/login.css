@@ -38,8 +38,16 @@ body {
 }
 
 #nav p {
-    width: 95px;
     font-size: 20px;
+}
+
+#direita {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-right: 200px;
 }
 
 #direita a {
@@ -50,17 +58,6 @@ body {
 #direita a:hover {
     color: rgb(201, 202, 202);
 }
-
-#direita {
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    padding-right: 320px;
-    color: white;
-}
-
 
 #esquerda {
     width: 100px;

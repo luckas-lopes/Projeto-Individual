@@ -45,7 +45,7 @@ function entrar() {
                 legendaLogin.innerHTML = '<font color="00ff00">Login realizado com sucesso!'
 
                 setTimeout(function () {
-                    window.location = "./sobreDesenho.html";
+                    window.location = "./home.html";
                 }, 1000);
 
             });
