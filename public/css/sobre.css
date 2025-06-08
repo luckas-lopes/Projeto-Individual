@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
     font-family: bob;
     src: url(../font/KrabbyPatty.ttf);
@@ -50,7 +52,7 @@ body {
 #direita a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    
+
 }
 
 #direita a:hover {
@@ -82,8 +84,70 @@ body {
     align-items: center;
     background-image: url(../img/backgroundBob.png);
     background-size: 100%;
-    height: 174vh;
+    height: 94vh;
 }
+
+#conteudo {
+
+    width: 100vh;
+    height: 60vh;
+    background-color: white;
+    border-radius: 2vh;
+    display: flex;
+    padding: 2vh;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0.5px 0px 3px black;
+    background-size: cover;
+    z-index: 1;
+}
+
+#texto {
+
+    font-family: 'Poppins';
+    font-size: 2vh;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+#foto {
+
+    border: 2px black solid;
+    width: 30vh;
+    height: 30vh;
+    box-sizing: border-box;
+    border-radius: 2vh;
+    background-image: url('../img/eu.jpg');
+    background-size: cover;
+
+}
+
+#flores1 {
+
+    position: absolute;
+    width: 100px;
+    left: 45vh;
+    bottom: 68vh;
+}
+
+#flores2 {
+
+    position: absolute;
+    width: 100px;
+    bottom: 68vh;
+    right: 46vh;
+    transform: rotate(180deg);
+}
+
+#bobCorrendo {
+
+    width: 100px;
+    position: absolute;
+    top: 73vh;
+    left: 50vh;
+
+}
+
 
 /* Footer */
 #footer {

@@ -121,7 +121,6 @@ body {
     font-family: 'bob';
     text-shadow: 3px 3px 1px rgb(255, 255, 255);
 
-
 }
 
 #cards {
@@ -142,6 +141,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0.5px 0px 3px black;
     z-index: 1;
 }
 
