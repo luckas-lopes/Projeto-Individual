@@ -1,12 +1,12 @@
 @font-face {
     font-family: bob;
     src: url(../font/KrabbyPatty.ttf);
- }
+}
 
- @font-face {
+@font-face {
     font-family: bob2;
     src: url(../font/freckle-face-regular.ttf);
- }
+}
 
 body {
     margin: 0;
@@ -86,15 +86,187 @@ body {
     align-items: center;
     background-image: url(../img/backgroundBob.png);
     background-size: 100%;
-    height: 94vh;
+    height: 174vh;
 }
 
+
 #conteudo {
-    background-color: white;
-    width: 150vh;
-    height: 60vh;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 1200px;
+    height: 1400px;
     border-radius: 15px;
-} 
+    border-color: rgb(191, 200, 207);
+    border-width: 2px;
+    border-style: solid;
+    z-index: 1;
+    /* background-image: url('../img/backgroundLaranja.jpeg'); */
+}
+
+#criador {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+}
+
+#imgQuiz {
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* background-image: url(../img/printQuiz.png);
+    background-size: cover; */
+    /* border: 0.2vh solid black; */
+    height: 400px;
+    width: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#imgQuiz img {
+
+    width: 50vh;
+    height: 37vh;
+    border-radius: 2vh;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#textoQuiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    justify-self: flex-start;
+    float: right;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    font-size: 2vh;
+}
+
+#textoQuiz h1 {
+    text-align: center;
+}
+
+#textoCriador p {
+    padding: 30px;
+    text-align: center;
+}
+
+#minigame {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 500px;
+}
+
+#textoMinigame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    float: left;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    font-size: 2vh;
+
+}
+
+#textoMinigame h1 {
+    text-align: center;
+}
+
+#textoMinigame p {
+    padding: 30px;
+}
+
+#imgMinigame {
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* background-image: url(../img/printQuiz.png);
+    background-size: cover; */
+    /* border: 0.2vh solid black; */
+    height: 400px;
+    width: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#imgMinigame img {
+
+    width: 50vh;
+    height: 37vh;
+    border-radius: 2vh;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#dashboard {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1000px;
+}
+
+#imgDashboard {
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* background-image: url(../img/printQuiz.png);
+    background-size: cover; */
+    /* border: 0.2vh solid black; */
+    height: 400px;
+    width: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#imgDashboard img {
+
+    width: 50vh;
+    height: 30vh;
+    border-radius: 2vh;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#textoDashboard {
+    display: flex;
+    float: right;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    float: left;
+    width: 550px;
+    height: 400px;
+    position: relative;
+    font-size: 2vh;
+
+}
+
+#textoDashboard h1 {
+    text-align: center;
+}
+
+#textoDashboard p {
+    padding: 30px;
+}
 
 /* Footer */
 #footer {
