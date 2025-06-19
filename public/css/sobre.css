@@ -126,7 +126,7 @@ body {
 
     position: absolute;
     width: 100px;
-    left: 45vh;
+    left: 57vh;
     bottom: 68vh;
 }
 
@@ -135,7 +135,7 @@ body {
     position: absolute;
     width: 100px;
     bottom: 68vh;
-    right: 46vh;
+    right: 57vh;
     transform: rotate(180deg);
 }
 
@@ -144,7 +144,7 @@ body {
     width: 100px;
     position: absolute;
     top: 73vh;
-    left: 50vh;
+    left: 60vh;
 
 }
 
